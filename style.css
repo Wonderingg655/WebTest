@@ -1,0 +1,304 @@
+@font-face {
+    font-family: Kanit;
+    src: url(Kanit-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit';
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.NavBar {
+    background-color: #16b8c0;
+    font-weight: 900;
+    height: 10vh;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.NavBar div {
+    margin-left: 50px;
+    font-size: 25px;
+    width: fit-content;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 65% auto;
+    grid-template-rows: 60% auto;
+
+    gap: 15px;
+    padding: 15px;
+
+    box-sizing: border-box;
+    height: 90vh;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#gridItem1,
+#gridItem2,
+#gridItem3 {
+    box-sizing: border-box;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    border-radius: 2vh;
+    display: grid;
+    grid-template-rows: 50px auto;
+    overflow: hidden;
+}
+
+
+#conleft {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+}
+
+#gridItem1,
+#gridItem3 {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#gridItem3 {
+    grid-column: 1 / 3;
+}
+
+.headerRight,
+.headerAns,
+.headerBlock {
+    background-color: #1693c0;
+    text-align: center;
+    font-size: 21px;
+    width: 100% +20px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    line-height: 50px;
+}
+
+#conright,
+#conrightE {
+    min-width: 85px;
+    min-height: 30px;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 1vh;
+    border: 3px solid #1693c0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+#conrightE {
+    display: inline-flexbox;
+}
+
+.codeRed,
+#show1 {
+    margin: 20px 25px;
+    overflow: hidden;
+}
+
+mark {
+    color: #c01616d1;
+    background-color: transparent;
+}
+
+select,
+input[type=text] {
+    display: inline-block;
+    border: 3px solid #1693c0bb;
+    font-size: 14px;
+    padding-left: 8px;
+    border-radius: 1vh;
+}
+
+input[type=text] {
+    width: 75px;
+}
+
+option,
+.Ldescription {
+    font-size: 14px;
+}
+
+.list1 {
+    background-color: #96d4e9;
+    padding: 10px 20px;
+    color: rgba(0, 0, 0, 0.676);
+    font-weight: bold;
+    text-align: center;
+    cursor: grab;
+    border-radius: 1vh;
+    text-wrap: nowrap;
+    width: fit-content;
+    vertical-align: middle;
+}
+
+#L3 {
+    background-color: #90dfb5;
+}
+
+
+@media screen and (max-width: 1400px) {
+
+    * {
+        font-size: 15px;
+    }
+
+    .NavBar {
+        height: 8vh;
+    }
+
+    .NavBar div {
+        font-size: 21px;
+    }
+
+    .gridContainer {
+        gap: 10px;
+        padding: 10px;
+
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .codeRed,
+    #show1 {
+        margin: 15px 20px;
+    }
+
+    .headerRight,
+    .headerAns,
+    .headerBlock {
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+
+    }
+
+    .list1{
+        padding: 7px;
+        border-radius: 1vh;
+    }
+
+    option,
+    .Ldescription,
+    select,
+    input[type=text] {
+        font-size: 12px;
+    }
+
+    #conleft {
+        gap: 15px;
+    }
+
+    #conright,
+    #conrightE {
+        min-height: 18.5px;
+        min-width: 47px;
+        border: 2px solid #1693c0;
+    }
+
+    select,
+    input[type=text] {
+        border: 2px solid #1693c0bb;
+    }
+
+    input[type=text] {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    * {
+        font-size: 9px;
+    }
+
+    .NavBar {
+        height: 6vh;
+    }
+
+    .NavBar div {
+        font-size: 15px;
+    }
+
+    .gridContainer {
+        grid-template-columns: 60% auto;
+        height: 94vh;
+
+        gap: 8px;
+        padding: 8px;
+
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .codeRed,
+    #show1 {
+        margin: -5px 9px;
+    }
+
+    #conleft {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .headerRight,
+    .headerAns,
+    .headerBlock {
+        height: 33px;
+        font-size: 12px;
+        line-height: 33px;
+
+    }
+
+    option,
+    .Ldescription,
+    select,
+    input[type=text] {
+        font-size: 8px;
+    }
+
+    #conright,
+    #conrightE {
+        min-height: 16.5px;
+        min-width: 45px;
+        border: 2px solid #1693c0;
+    }
+
+    select,
+    input[type=text] {
+        border: 2px solid #1693c0bb;
+    }
+
+    input[type=text] {
+        width: 45px;
+    }
+}

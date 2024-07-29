@@ -1,0 +1,1 @@
+<p <?php echo $_POST['num']; ?>>Hello World</p>
