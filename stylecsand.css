@@ -79,7 +79,7 @@ body {
 .gridContainer {
     display: grid;
     grid-template-columns: 45% auto;
-    grid-template-rows: 70% auto;
+    grid-template-rows: auto;
 
     gap: 15px;
     padding: 15px;
@@ -143,9 +143,11 @@ body {
 
 .conrightA,
 .conrightA2,
+.conrightB2,
 #conrightC1,
 #conrightE3,
-#conrightE4 {
+#conrightE4,
+#conrightEStyle {
     min-width: 85px;
     min-height: 30px;
     padding: 0;
@@ -160,8 +162,13 @@ body {
     flex-direction: column;
 }
 
-.conrightA{
+.conrightA {
     border: 0;
+}
+
+#conrightE3,
+#conrightE4 {
+    margin-top: -5px;
 }
 
 
@@ -198,7 +205,8 @@ option,
     font-size: 14px;
 }
 
-.list1, .list2 {
+.list1,
+.list2 {
     background-color: #96d4e9;
     padding: 10px 20px;
     color: rgba(0, 0, 0, 0.676);
@@ -209,7 +217,7 @@ option,
     text-wrap: nowrap;
 }
 
-.list2{
+.list2 {
     cursor: default;
 }
 
@@ -223,7 +231,7 @@ option,
     display: inline;
 }
 
-.listE2B{
+.listE2B {
     background-color: #ecb18f;
 }
 
@@ -231,12 +239,13 @@ option,
     background-color: #eff164;
 }
 
-.listE4{
-    background-color: #cff181;
+.listE4 {
+    background-color: #a4e492;
+
 }
 
-.listE5{
-    background-color: #b7f898;
+.listE5 {
+    background-color: #96e2d9;
 }
 
 .list2 {
@@ -247,24 +256,28 @@ option,
 }
 
 
-.Ldescription{
+.Ldescription {
     text-align: center;
 }
 
-.conrightA .listE2I,  .conrightA .listE4{
+.conrightA .listE2I,
+.conrightA .listE4 {
     text-align: left;
 }
 
-.conrightA .conrightA2 {
+.conrightA .conrightA2,
+.conrightA .conrightB2 {
     width: 700px;
-    min-height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    min-height: 590px;
+    padding: 15px;
+
 }
 
-.headerAnsEdit{
+.conrightA .conrightB2 {
+    min-height: 70px;
+}
+
+.headerAnsEdit {
     background-color: rgb(52, 202, 190);
     border-bottom: #1693c0 5px solid;
 }
@@ -272,4 +285,16 @@ option,
 .gridContainerInfo {
     grid-template-columns: auto;
     grid-template-rows: auto;
+}
+
+#textL5C1 {
+    margin-top: 6px;
+}
+
+#DropdownMenu4 {
+    width: 80px;
+}
+
+#conrightC1 .Ldescription {
+    display: none;
 }

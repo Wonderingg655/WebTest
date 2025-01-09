@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="quizstyle.css">
+
+    <script type="text/javascript">
+        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
+             run();
+             alert("1");
+         }, 500);*/
+    </script>
 
     <title>Web Game</title>
 </head>
@@ -13,7 +23,7 @@
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทเรียน
+            ⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
         </div>
         <div id="classDropdown" class="classDropdown">
             <div onclick="window.location.href = 'info1.html'">
@@ -33,11 +43,14 @@
             </div>
         </div>
 
+        <div class="dropdownHeader" onclick="window.location.href = 'sand4.html'">
+            หน้าต่อไป ⯈
+        </div>
     </div>
 
     <div class="gridContainer gridContainerInfo">
-        <div style="border-radius: 2vh; overflow-x: hidden; box-sizing: border-box; padding: 0;">
-            <div class="headerRight" style="font-size: 40px; padding: 10px;">การสร้างเว็บเพจด้วยภาษา HTML</div>
+        <div id="gridItem1">
+            <div class="headerRight">บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML</div>
             HTML
             head
             title

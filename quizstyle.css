@@ -1,0 +1,138 @@
+.gridContainerTest {
+    grid-template-columns: auto;
+    grid-template-rows: 50% auto;
+}
+
+#containerTestChoice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.choice1,
+.choice2,
+.choice3,
+.choice4 {
+    height: 120px;
+    width: 860px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: solid 7px #0d567018;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choiceQuiz{
+    font-size: 30px;
+    padding: 15px;
+    text-align: center;
+}
+
+.choiceSelect {
+    box-shadow: 0 0 0px 7px #1693c0;
+}
+
+.popupAns {
+    top: -700px;
+    opacity: 0;
+    visibility: hidden;
+    width: 40%;
+    left: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    padding: 30px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    border-radius: 30px;
+
+    transition: 0.4s;
+}
+
+.open-popupAns {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(255, 255, 255);
+}
+
+.blurBGAns {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+
+    transition: 0.4s;
+}
+
+.open-BGAns {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ImgAns {
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: auto;
+    display: block;
+}
+
+.headerTestF {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    color: rgb(212, 43, 94);
+    margin-bottom: 10px;
+}
+
+.buttonTestF {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(212, 43, 94);
+    padding: 20px 50px;
+    width: fit-content;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.headerTestT {
+    color: rgb(29, 179, 96);
+}
+
+.buttonTestT {
+    background-color: rgb(29, 179, 96);
+}
+
+.gridTest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridQuestion{
+    font-size: 50px;
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}

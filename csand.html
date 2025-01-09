@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="stylecsand.css">
+
+    <script type="text/javascript">
+        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
+             run();
+             alert("1");
+         }, 500);*/
+    </script>
+
+    <title>Web Game</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            ⏷ เขียนโค้ด
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'info1.html'">
+                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'">
+                บทที่ 2 คำสั่งภาษา HTML 1
+            </div>
+            <div onclick="window.location.href = 'info3.html'">
+                บทที่ 3 คำสั่งภาษา HTML 2
+            </div>
+            <div onclick="window.location.href = 'info4.html'">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'csand.html'">
+                เขียนโค้ด
+            </div>
+        </div>
+
+    </div>
+
+    <div class="gridContainer">
+        <div class="conright2" id="gridItem1">
+            <div class="headerRight">โค้ดคำสั่ง</div>
+            <div class="codeRed">
+                <div id="conrightC1">
+
+                    <div class="list2" id="L1C1">
+                        <div class="listItem1">&lt;<div class="listE1">html</div>&gt;</div>
+                        <div id="conrightE" class="conrightA">
+                            <!-- <div class="list2" id="L3C1">
+                                <div>&lt;<div class="listE2">head</div>&gt;</div>
+                                <div id="conrightE2A" class="conrightB2"></div>
+                                <div>&lt;&#47;<div class="listE2">head</div>&gt;</div>
+                            </div> -->
+
+                            <div class="list2" id="L3C1">
+                                <div>&lt;<div class="listE2">body</div>&gt;</div>
+                                <textarea id="conrightE2B" class="conrightA2" onkeyup="run()"><div style="font-size:50px;">Hello World</div></textarea>
+                                <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
+                            </div>
+
+                        </div>
+                        <div class="listItem1">&lt;&#47;<div class="listE1">html</div>&gt;</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conans" id="gridItem2">
+            <div class="headerAns" id="headerAns">
+                <div></div>ผลลัพธ์
+            </div>
+            <p id="show1"></p>
+        </div>
+
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+    <!-- DragDrop Stuff -->
+    <script>
+        document.getElementById('conrightE2B').addEventListener('keydown', function (e) {
+            if (e.key == 'Tab') {
+                e.preventDefault();
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
+
+                // set textarea value to: text before caret + tab + text after caret
+                this.value = this.value.substring(0, start) +
+                    "\t" + this.value.substring(end);
+
+                // put caret at right position again
+                this.selectionStart =
+                    this.selectionEnd = start + 1;
+            }
+        });
+
+
+        function run() {
+            let textCode = document.getElementById('conrightE2B').value;
+
+            // var textDiv = textL5C1.value;
+
+            show(textCode);
+        }
+        window.onload = run();
+
+
+        function show(a) {
+            let show1 = document.getElementById("show1");
+
+            var strHTML1 = '';
+            strHTML1 = strHTML1.concat(a);
+
+            //version 1 - innerHTML
+            show1.innerHTML = strHTML1;
+        }
+
+
+
+
+
+        // let listE1 = document.getElementById("L1C1");
+
+        // if (contains(rightBox, rightBoxE)) {
+        //     listE1.classList.add("listE1I");
+        // }
+        // else {
+        //     listE1.classList.remove("listE1I");
+        // }
+
+        // if (rightBoxE.childElementCount > 0) rightBoxE.style.background = '#96d4e9';
+        // else rightBoxE.style.background = 'white';
+
+        // if (rightBox.childElementCount > 0) rightBox.style.background = '#90dfb5';
+        // else rightBox.style.background = 'white';
+        // }
+    </script>
+    <!-- DragDrop Stuff -->
+</body>
+
+
+</html>

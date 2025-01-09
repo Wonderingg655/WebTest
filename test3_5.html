@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="quizstyle.css">
+
+    <title>Web Game</title>
+</head>
+
+<body>
+    <div class="blurBGAns" id="idblurBGAns"></div>
+
+    <div class="popupAns" id="popupID2Ans">
+        <div id="showAns1"></div>
+        <div id="showAns2"></div>
+        <div id="showAns3" onclick="window.location.href = 'test3.html'"></div>
+        <div id="showAns4" onclick="window.location.href = 'info4.html'"></div>
+    </div>
+
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            ⏷ บทที่ 3 คำสั่งภาษา HTML 2
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'info1.html'">
+                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'">
+                บทที่ 2 คำสั่งภาษา HTML 1
+            </div>
+            <div onclick="window.location.href = 'info3.html'">
+                บทที่ 3 คำสั่งภาษา HTML 2
+            </div>
+            <div onclick="window.location.href = 'info4.html'">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'csand.html'">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div class="dropdownHeader" onclick="checkAns()">
+            ส่งคำตอบ ⯈
+        </div>
+    </div>
+
+    <div class="gridContainer">
+        <div class="conright2" id="gridItem1">
+            <div class="headerRight">โค้ดคำสั่ง</div>
+            <div class="codeRed">
+                <div id="conrightC1">
+
+                    <div class="list2" id="L1C1">
+                        <div class="listItem1">&lt;<div class="listE1">html</div>&gt;</div>
+                        <div id="conrightE" class="conrightA">
+
+                            <div class="list2" id="L3C1">
+                                <div>&lt;<div class="listE2">body</div>&gt;</div>
+                                <div id="conrightE2B" class="conrightA2"></div>
+                                <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
+                            </div>
+
+                        </div>
+                        <div class="listItem1">&lt;&#47;<div class="listE1">html</div>&gt;</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conans" id="gridItem2">
+            <div class="headerAns" id="headerAns">
+                ข้อที่ 5
+            </div>
+            <div class="gridTest">
+                <div class="gridQuestion">จงสร้างตารางที่มี 2 แถว 2 คอลัมน์ ดังภาพ
+                    <table class='sand-table' border='1px' style="margin-top: 20px;">
+                        <tr>
+                            <td>Hello World</td>
+                            <td>Hello World</td>
+                        </tr>
+                        <tr>
+                            <td>Hello World</td>
+                            <td>Hello World</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="conconleft" id="gridItem3">
+            <div class="headerBlock">บล็อกคำสั่ง</div>
+            <div id="conleft">
+                <div class="list1 listE3 listE2I" id="L7C1" draggable="true">
+                    <div>
+                        <div>&lt;table&gt;</div>
+                        <div id="conrightE3"></div>
+                        <div>&lt;&#47;table&gt;</div>
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกตาราง</div>
+                </div>
+
+                <div class="list1 listE4" id="L8C1-1" draggable="true">
+                    <div>
+                        <div>&lt;tr&gt;</div>
+                        <div id="conrightE4C1-1"></div>
+                        <div>&lt;&#47;tr&gt;</div>
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกแถวตาราง</div>
+                </div>
+
+                <div class="list1 listE4" id="L8C1-2" draggable="true">
+                    <div>
+                        <div>&lt;tr&gt;</div>
+                        <div id="conrightE4C1-2"></div>
+                        <div>&lt;&#47;tr&gt;</div>
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกแถวตาราง</div>
+                </div>
+
+                <div class="list1 listE4" id="L8C1-3" draggable="true">
+                    <div>
+                        <div>&lt;tr&gt;</div>
+                        <div id="conrightE4C1-3"></div>
+                        <div>&lt;&#47;tr&gt;</div>
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกแถวตาราง</div>
+                </div>
+
+                <div class="list1 listE5" id="L9C1-1" draggable="true">
+                    <div>
+                        &lt;td&gt;
+                        <input type="text" id="textL9C1-1" onkeyup="run();" value="Hello World">
+                        &lt;&#47;td&gt;
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกคอลัมน์ตาราง</div>
+                </div>
+
+                <div class="list1 listE5" id="L9C1-2" draggable="true">
+                    <div>
+                        &lt;td&gt;
+                        <input type="text" id="textL9C1-2" onkeyup="run();" value="Hello World">
+                        &lt;&#47;td&gt;
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกคอลัมน์ตาราง</div>
+                </div>
+                <div class="list1 listE5" id="L9C1-3" draggable="true">
+                    <div>
+                        &lt;td&gt;
+                        <input type="text" id="textL9C1-3" onkeyup="run();" value="Hello World">
+                        &lt;&#47;td&gt;
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกคอลัมน์ตาราง</div>
+                </div>
+
+                <div class="list1 listE5" id="L9C1-4" draggable="true">
+                    <div>
+                        &lt;td&gt;
+                        <input type="text" id="textL9C1-4" onkeyup="run();" value="Hello World">
+                        &lt;&#47;td&gt;
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกคอลัมน์ตาราง</div>
+                </div>
+
+                <div class="list1 listE5" id="L9C1-5" draggable="true">
+                    <div>
+                        &lt;td&gt;
+                        <input type="text" id="textL9C1-5" onkeyup="run();" value="Hello World">
+                        &lt;&#47;td&gt;
+                    </div>
+                    <div class="Ldescription hidden">คำสั่งแทรกคอลัมน์ตาราง</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+    <!-- DragDrop Stuff -->
+    <script>
+        let lists1 = document.getElementsByClassName("list1");
+        let rightBox = document.getElementById("conrightC1");
+        let rightBoxE = document.getElementById("conrightE");
+        let rightBoxE2B = document.getElementById("conrightE2B");
+        let rightBoxE3 = document.getElementById("conrightE3");
+        let rightBoxE4C1 = document.getElementById("conrightE4C1-1");
+        let rightBoxE4C2 = document.getElementById("conrightE4C1-2");
+        let rightBoxE4C3 = document.getElementById("conrightE4C1-3");
+        let leftBox = document.getElementById("conleft");
+
+        for (list1 of lists1) {
+            list1.addEventListener("dragstart", function (e) {
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBox.addEventListener("drop", function (e) {
+                    if (selected.id == "L1C1" && rightBox.childElementCount < 10) {
+                        rightBox.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else selected = null;
+                });
+
+                leftBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                leftBox.addEventListener("drop", function (e) {
+                    leftBox.appendChild(selected);
+                    selected = null;
+                    run();
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE.addEventListener("drop", function (e) {
+                    if ((selected.id == "L2C1" || selected.id == "L3C1") && rightBoxE.childElementCount < 10) { //limit item in continer 
+                        rightBoxE.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE2B.addEventListener("drop", function (e) {
+                    if ((selected.id == "L7C1" || selected.id == "L8C1-1" || selected.id == "L8C1-2" || selected.id == "L8C1-3" || selected.id == "L9C1-1" || selected.id == "L9C1-2" || selected.id == "L9C1-3" || selected.id == "L9C1-4" || selected.id == "L9C1-5") && rightBoxE2B.childElementCount < 10) { //limit item in continer 
+                        rightBoxE2B.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE3.addEventListener("drop", function (e) {
+                    if ((selected.id == "L7C1" || selected.id == "L8C1-1" || selected.id == "L8C1-2" || selected.id == "L8C1-3" || selected.id == "L9C1-1" || selected.id == "L9C1-2" || selected.id == "L9C1-3" || selected.id == "L9C1-4" || selected.id == "L9C1-5") && rightBoxE3.childElementCount < 10) { //limit item in continer 
+                        rightBoxE3.appendChild(selected);
+                        selected = null;
+                        run();
+                        sortTR("conrightE3");
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE4C1.addEventListener("drop", function (e) {
+                    if ((selected.id == "L7C1" || selected.id == "L8C1-1" || selected.id == "L8C1-2" || selected.id == "L8C1-3" || selected.id == "L9C1-1" || selected.id == "L9C1-2" || selected.id == "L9C1-3" || selected.id == "L9C1-4" || selected.id == "L9C1-5") && rightBoxE4C1.childElementCount < 10) { //limit item in continer 
+                        rightBoxE4C1.appendChild(selected);
+                        selected = null;
+                        run();
+                        sortTD("conrightE4C1-1");
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                rightBoxE4C2.addEventListener("drop", function (e) {
+                    if ((selected.id == "L7C1" || selected.id == "L8C1-1" || selected.id == "L8C1-2" || selected.id == "L8C1-3" || selected.id == "L9C1-1" || selected.id == "L9C1-2" || selected.id == "L9C1-3" || selected.id == "L9C1-4" || selected.id == "L9C1-5") && rightBoxE4C2.childElementCount < 10) { //limit item in continer 
+                        rightBoxE4C2.appendChild(selected);
+                        selected = null;
+                        run();
+                        sortTD("conrightE4C1-2");
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                rightBoxE4C3.addEventListener("drop", function (e) {
+                    if ((selected.id == "L7C1" || selected.id == "L8C1-1" || selected.id == "L8C1-2" || selected.id == "L8C1-3" || selected.id == "L9C1-1" || selected.id == "L9C1-2" || selected.id == "L9C1-3" || selected.id == "L9C1-4" || selected.id == "L9C1-5") && rightBoxE4C3.childElementCount < 10) { //limit item in continer 
+                        rightBoxE4C3.appendChild(selected);
+                        selected = null;
+                        run();
+                        sortTD("conrightE4C1-3");
+                    } else {
+                        selected = null;
+                    }
+                });
+            })
+        }
+        let textAns = '';
+        function run() {
+            let textApp = '';
+            let L9C1 = document.getElementById("textL9C1-1");
+            var textL9C1 = L9C1.value;
+            let L9C2 = document.getElementById("textL9C1-2");
+            var textL9C2 = L9C2.value;
+            let L9C3 = document.getElementById("textL9C1-3");
+            var textL9C3 = L9C3.value;
+            let L9C4 = document.getElementById("textL9C1-4");
+            var textL9C4 = L9C4.value;
+            let L9C5 = document.getElementById("textL9C1-5");
+            var textL9C5 = L9C5.value;
+
+            // let textL5C1 = document.getElementById("textL5C1");
+            // var textDiv = textL5C1.value;
+
+            const contains = (parent, child) => {
+                return parent !== child && parent.contains(child);
+            }
+
+            if (contains(rightBox, rightBoxE) || contains(rightBox, rightBoxE2B)) {
+                if (contains(rightBoxE, rightBoxE2B)) {
+                    textApp = textApp.concat('<table class="sand-table" border="1px">');
+                    if (contains(rightBoxE2B, rightBoxE4C1)) {
+                        textApp = textApp.concat("<tr>");
+                        if (contains(rightBoxE4C1, L9C1)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C1, L9C2)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C1, L9C3)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C1, L9C4)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C1, L9C5)) textApp = textApp.concat("<td></td>");
+                        textApp = textApp.concat("</tr>");
+                    }
+                    if (contains(rightBoxE2B, rightBoxE4C2)) {
+                        textApp = textApp.concat("<tr>");
+                        if (contains(rightBoxE4C2, L9C1)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C2, L9C2)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C2, L9C3)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C2, L9C4)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C2, L9C5)) textApp = textApp.concat("<td></td>");
+                        textApp = textApp.concat("</tr>");
+                    }
+                    if (contains(rightBoxE2B, rightBoxE4C3)) {
+                        textApp = textApp.concat("<tr>");
+                        if (contains(rightBoxE4C3, L9C1)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C3, L9C2)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C3, L9C3)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C3, L9C4)) textApp = textApp.concat("<td></td>");
+                        if (contains(rightBoxE4C3, L9C5)) textApp = textApp.concat("<td></td>");
+                        textApp = textApp.concat("</tr>");
+                    }
+                    textApp = textApp.concat("</table>");
+                    textAns = textApp;
+                }
+            }
+        }
+
+        function checkAns() {
+            if (textAns == '<table class="sand-table" border="1px"><tr><td></td><td></td></tr><tr><td></td><td></td></tr></table>')
+                openPopupAns("correct");
+            else
+                openPopupAns("false");
+
+        }
+
+        function sortTR(con) {
+            var container = document.getElementById(con);
+            var elements = container.childNodes;
+            var sortMe = [];
+            for (var i = 0; i < elements.length; i++) {
+                if (!elements[i].id) {
+                    continue;
+                }
+                var sortPart = elements[i].id.split("-");
+                if (sortPart.length > 1) {
+                    sortMe.push([1 * sortPart[1], elements[i]]);
+                }
+            }
+            sortMe.sort();
+            for (var i = 0; i < sortMe.length; i++) {
+                container.appendChild(sortMe[i][1]);
+            }
+        }
+
+        function sortTD(con) {
+            var container = document.getElementById(con);
+            var elements = container.childNodes;
+            var sortMe = [];
+            for (var i = 0; i < elements.length; i++) {
+                if (!elements[i].id) {
+                    continue;
+                }
+                var sortPart = elements[i].id.split("-");
+                if (sortPart.length > 1) {
+                    sortMe.push([1 * sortPart[1], elements[i]]);
+                }
+            }
+            sortMe.sort();
+            for (var i = 0; i < sortMe.length; i++) {
+                container.appendChild(sortMe[i][1]);
+            }
+        }
+
+        function openPopupAns(ac) {
+            var popupID2Ans = document.getElementById("popupID2Ans");
+            var idblurBGAns = document.getElementById("idblurBGAns");
+            var showAns1 = document.getElementById("showAns1");
+            var showAns2 = document.getElementById("showAns2");
+            var showAns3 = document.getElementById("showAns3");
+            popupID2Ans.classList.add("open-popupAns");
+            idblurBGAns.classList.add("open-BGAns");
+
+            if (ac == "correct") {
+                showAns1.innerHTML = "<img src='chec.jpg' class='ImgAns'>";
+                showAns2.innerHTML = '<div class="headerTestF headerTestT">ยินดีด้วย<br>คุณผ่านการเรียนรู้<br>บทที่ 3 คำสั่งภาษา HTML 2<br>คะแนน 5/5 <br></div> ';
+                showAns4.innerHTML = "<div class='buttonTestF buttonTestT'>▷ บทต่อไป</div>";
+            } else {
+                showAns1.innerHTML = "<img src='exx.jpg' class='ImgAns'>";
+                showAns2.innerHTML = "<div class='headerTestF'>ผิด</div>";
+                showAns3.innerHTML = "<div class='buttonTestF'>⟳ เริ่มใหม่</div>";
+            }
+        }
+    </script>
+    <!-- DragDrop Stuff -->
+</body>
+
+
+</html>

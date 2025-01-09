@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="quizstyle.css">
+
+    <script type="text/javascript">
+        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
+             run();
+             alert("1");
+         }, 500);*/
+    </script>
+
+    <title>Web Game</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            ⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'info1.html'">
+                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'">
+                บทที่ 2 คำสั่งภาษา HTML 1
+            </div>
+            <div onclick="window.location.href = 'info3.html'">
+                บทที่ 3 คำสั่งภาษา HTML 2
+            </div>
+            <div onclick="window.location.href = 'info4.html'">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'csand.html'">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div class="dropdownHeader" onclick="window.location.href = 'test4.html'">
+            หน้าต่อไป ⯈
+        </div>
+    </div>
+
+    <div class="gridContainer">
+        <div class="conright2" id="gridItem1">
+            <div class="headerRight">โค้ดคำสั่ง</div>
+            <div class="codeRed">
+                <div id="conrightC1">
+
+                    <div class="list2" id="L1C1">
+                        <div class="listItem1">&lt;<div class="listE1">html</div>&gt;</div>
+                        <div id="conrightE" class="conrightA">
+
+                            <div class="list2" id="L3C1">
+                                <div>&lt;<div class="listE2">body</div>&gt;</div>
+                                <div id="conrightE2B" class="conrightA2"></div>
+                                <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
+                            </div>
+
+                        </div>
+                        <div class="listItem1">&lt;&#47;<div class="listE1">html</div>&gt;</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="conans" id="gridItem2">
+            <div class="headerAns" id="headerAns">
+                <div></div>ผลลัพธ์
+            </div>
+            <p id="show1"></p>
+        </div>
+
+        <div class="conconleft" id="gridItem3">
+            <div class="headerBlock">บล็อกคำสั่ง</div>
+            <div id="conleft">
+
+                <div class="list1 listE3 listE2I" id="L6C1" draggable="true">
+                    <div>
+                        &lt;img <div style="display: inline;
+                        border: 3px solid #1693c0bb; padding: 0 10px;">src=&#34;ball.jpg&#34;</div>
+                        <div id="conrightE3"></div> &gt; 
+                    </div>
+                    <div class="Ldescription">คำสั่งแทรกรูปภาพ</div>
+                </div>
+
+                <div class="list1 listE4" id="L8C1" draggable="true">
+                    <div>
+                        style = "
+                        <div id="conrightEStyle"></div> "
+                    </div>
+                    <div class="Ldescription">คำสั่งตกแต่งเว็บเพจ</div>
+                </div>
+
+                <div class="list1 listE5" id="L13C1" draggable="true">
+                    height:
+                    <input type="text" id="DropdownMenu5" onkeyup="run();" value="300px">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับความสูง</p>
+                </div>
+
+                <div class="list1 listE5" id="L14C1" draggable="true">
+                    width:
+                    <input type="text" id="DropdownMenu6" onkeyup="run();" value="300px">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับความกว้าง</p>
+                </div>
+
+                <div class="list1 listE5" id="L15C1" draggable="true">
+                    margin:
+                    <input type="text" id="DropdownMenu7" onkeyup="run();" value="30px">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับระยะห่าง</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+    <!-- DragDrop Stuff -->
+    <script>
+        let lists1 = document.getElementsByClassName("list1");
+        let rightBox = document.getElementById("conrightC1");
+        let rightBoxE = document.getElementById("conrightE");
+        let rightBoxE2B = document.getElementById("conrightE2B");
+        let rightBoxE3 = document.getElementById("conrightE3");
+        let rightBoxE4 = document.getElementById("conrightE4");
+        let rightBoxEStyle = document.getElementById("conrightEStyle");
+        let leftBox = document.getElementById("conleft");
+        let L6C1 = document.getElementById("L6C1");
+
+        for (list1 of lists1) {
+            list1.addEventListener("dragstart", function (e) {
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBox.addEventListener("drop", function (e) {
+                    if (selected.id == "L1C1" && rightBox.childElementCount < 10) {
+                        rightBox.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else selected = null;
+                });
+
+                leftBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                leftBox.addEventListener("drop", function (e) {
+                    leftBox.appendChild(selected);
+                    selected = null;
+                    run();
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE.addEventListener("drop", function (e) {
+                    if ((selected.id == "L2C1" || selected.id == "L3C1") && rightBoxE.childElementCount < 10) { //limit item in continer 
+                        rightBoxE.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE2B.addEventListener("drop", function (e) {
+                    if ((selected.id == "L5C1" || selected.id == "L6C1") && rightBoxE2B.childElementCount < 10) { //limit item in continer 
+                        rightBoxE2B.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxE3.addEventListener("drop", function (e) {
+                    if ((selected.id == "L8C1") && rightBoxE3.childElementCount < 10) { //limit item in continer 
+                        rightBoxE3.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+                list1.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                });
+                rightBoxEStyle.addEventListener("drop", function (e) {
+                    if ((selected.id == "L9C1" || selected.id == "L10C1" || selected.id == "L11C1" || selected.id == "L12C1" || selected.id == "L13C1" || selected.id == "L14C1" || selected.id == "L15C1") && rightBoxEStyle.childElementCount < 10) { //limit item in continer 
+                        rightBoxEStyle.appendChild(selected);
+                        selected = null;
+                        run();
+                    } else {
+                        selected = null;
+                    }
+                });
+
+            })
+        }
+
+        function run() {
+            let textApp = '';
+
+            var textStyle = '';
+
+            var text5 = DropdownMenu5.value;
+            var text6 = DropdownMenu6.value;
+            var text7 = DropdownMenu7.value;
+
+            const contains = (parent, child) => {
+                return parent !== child && parent.contains(child);
+            }
+
+            if (contains(conrightE2B, L6C1)) {
+                if (contains(L6C1, rightBoxEStyle)) {
+                    if (contains(rightBoxEStyle, DropdownMenu5))
+                        textStyle = textStyle.concat("height:", text5, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu6))
+                        textStyle = textStyle.concat("width:", text6, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu7))
+                        textStyle = textStyle.concat("margin:", text7, ";");
+                }
+                textApp = textApp.concat('<img src="ball.jpg" style="', textStyle, '">');
+            }
+
+            // if (rightBoxE.querySelector("#L2C1") != null)
+            //     textApp = textApp.concat("background-color:", text1, ";");
+
+            // textApp = textApp.concat('"');
+            show(textApp);
+        }
+
+        function show(a) {
+            let show1 = document.getElementById("show1");
+
+            var strHTML1 = '';
+            strHTML1 = strHTML1.concat(a);
+
+            //version 1 - innerHTML
+            show1.innerHTML = strHTML1;
+        }
+
+
+
+
+
+        // let listE1 = document.getElementById("L1C1");
+
+        // if (contains(rightBox, rightBoxE)) {
+        //     listE1.classList.add("listE1I");
+        // }
+        // else {
+        //     listE1.classList.remove("listE1I");
+        // }
+
+        // if (rightBoxE.childElementCount > 0) rightBoxE.style.background = '#96d4e9';
+        // else rightBoxE.style.background = 'white';
+
+        // if (rightBox.childElementCount > 0) rightBox.style.background = '#90dfb5';
+        // else rightBox.style.background = 'white';
+        // }
+    </script>
+    <!-- DragDrop Stuff -->
+</body>
+
+
+</html>

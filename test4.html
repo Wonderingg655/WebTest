@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="quizstyle.css">
+
+    <script type="text/javascript">
+        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
+             run();
+             alert("1");
+         }, 500);*/
+    </script>
+
+    <title>Web Game</title>
+</head>
+
+<body>
+    <div class="blurBGAns" id="idblurBGAns"></div>
+
+    <div class="popupAns" id="popupID2Ans">
+        <div id="showAns1"></div>
+        <div id="showAns2"></div>
+        <div id="showAns3" onclick="window.location.href = 'test4.html'"></div>
+        <div id="showAns4" onclick="window.location.href = 'test4_2.html'"></div>
+    </div>
+
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            ⏷ บทที่ 4 บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'info1.html'">
+                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'">
+                บทที่ 2 คำสั่งภาษา HTML 1
+            </div>
+            <div onclick="window.location.href = 'info3.html'">
+                บทที่ 3 คำสั่งภาษา HTML 2
+            </div>
+            <div onclick="window.location.href = 'info4.html'">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'csand.html'">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div class="dropdownHeader" onclick="checkAns()">
+            ส่งคำตอบ ⯈
+        </div>
+    </div>
+
+    <div class="gridContainer gridContainerTest">
+        <div id="gridItem1">
+            <div class="headerRight">ข้อที่ 1</div>
+            <div class="gridTest">
+                <div class="gridQuestion">ข้อใดคือหน้าที่ของคำสั่ง style="....."</div>
+            </div>
+        </div>
+
+        <div id="gridItem2">
+            <div class="headerRight">ตัวเลือก</div>
+            <div id="containerTestChoice">
+                <div id="choice-1" class="choice1" onclick="choice1()" data-choice="1">
+                    <div class="choiceQuiz">กำหนดรูปแบบต่างๆให้กับองค์ประกอบ เช่น สีพื่นหลัง สีตัวอักษร</div>
+                </div>
+                <div id="choice-4" class="choice4" onclick="choice4()" data-choice="4">
+                    <div class="choiceQuiz">แทรกกล่องใส่ข้อมูลต่างๆ เช่น ข้อความ</div>
+                </div>
+                <div id="choice-2" class="choice2" onclick="choice2()" data-choice="2">
+                    <div class="choiceQuiz">แทรกปุ่มกด</div>
+                </div>
+                <div id="choice-3" class="choice3" onclick="choice3()" data-choice="3">
+                    <div class="choiceQuiz">ปรับขนาดตัวอักษร</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Sort Choice -->
+    <script>
+        function shuffle(array) {
+            let currentIndex = array.length;
+
+            // While there remain elements to shuffle...
+            while (currentIndex != 0) {
+
+                // Pick a remaining element...
+                let randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                    array[randomIndex], array[currentIndex]];
+            }
+        }
+
+        function sortdiv() {
+            var container = document.getElementById("containerTestChoice");
+            var elements = container.childNodes;
+            var sortMe = [];
+            for (var i = 0; i < elements.length; i++) {
+                if (!elements[i].id) {
+                    continue;
+                }
+                var sortPart = elements[i].id.split("-");
+                if (sortPart.length > 1) {
+                    sortMe.push([1 * sortPart[1], elements[i]]);
+                }
+            }
+
+            shuffle(sortMe);
+            for (var i = 0; i < sortMe.length; i++) {
+                container.appendChild(sortMe[i][1]);
+            }
+        }
+
+        window.addEventListener('load', function () {
+            sortdiv()
+        })
+    </script>
+    <!--  Sort Choice -->
+    <!--  Check Choice -->
+    <script>
+        var Vchoice1 = document.getElementById("choice-1");
+        var Vchoice2 = document.getElementById("choice-2");
+        var Vchoice3 = document.getElementById("choice-3");
+        var Vchoice4 = document.getElementById("choice-4");
+        var ans;
+        function choice1() {
+            Vchoice1.classList.add("choiceSelect");
+            Vchoice2.classList.remove("choiceSelect");
+            Vchoice3.classList.remove("choiceSelect");
+            Vchoice4.classList.remove("choiceSelect");
+            ans = 1;
+        }
+        function choice2() {
+            Vchoice1.classList.remove("choiceSelect");
+            Vchoice2.classList.add("choiceSelect");
+            Vchoice3.classList.remove("choiceSelect");
+            Vchoice4.classList.remove("choiceSelect");
+            ans = 2;
+        }
+        function choice3() {
+            Vchoice1.classList.remove("choiceSelect");
+            Vchoice2.classList.remove("choiceSelect");
+            Vchoice3.classList.add("choiceSelect");
+            Vchoice4.classList.remove("choiceSelect");
+            ans = 3;
+        }
+        function choice4() {
+            Vchoice1.classList.remove("choiceSelect");
+            Vchoice2.classList.remove("choiceSelect");
+            Vchoice3.classList.remove("choiceSelect");
+            Vchoice4.classList.add("choiceSelect");
+            ans = 4;
+        }
+
+        function checkAns() {
+            if (ans == 1) {
+                openPopupAns("correct");
+            }
+            else {
+                openPopupAns("false");
+            }
+        }
+
+        function openPopupAns(ac) {
+            var popupID2Ans = document.getElementById("popupID2Ans");
+            var idblurBGAns = document.getElementById("idblurBGAns");
+            var showAns1 = document.getElementById("showAns1");
+            var showAns2 = document.getElementById("showAns2");
+            var showAns3 = document.getElementById("showAns3");
+            popupID2Ans.classList.add("open-popupAns");
+            idblurBGAns.classList.add("open-BGAns");
+
+            if (ac == "correct") {
+                showAns1.innerHTML = "<img src='chec.jpg' class='ImgAns'>";
+                showAns2.innerHTML = "<div class='headerTestF headerTestT'>ถูกต้อง</div>";
+                showAns4.innerHTML = "<div class='buttonTestF buttonTestT'>▷ ข้อต่อไป</div>";
+            } else {
+                showAns1.innerHTML = "<img src='exx.jpg' class='ImgAns'>";
+                showAns2.innerHTML = "<div class='headerTestF'>ผิด</div>";
+                showAns3.innerHTML = "<div class='buttonTestF'>⟳ เริ่มใหม่</div>";
+            }
+        }
+    </script>
+    <!--  Check Choice -->
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+</body>
+
+
+</html>

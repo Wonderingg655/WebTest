@@ -15,7 +15,7 @@ body {
     background-color: aliceblue;
 }
 
-/* nav---------- */
+/* NavBar dropdownHeader gridContainerInfo */
 
 .NavBar {
     background-color: #16b8c0;
@@ -29,6 +29,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+/* nav copy */
 
 .classDropdown {
     top: 180px;
@@ -145,7 +147,10 @@ body {
 .conrightA2,
 #conrightC1,
 #conrightE3,
-#conrightE4 {
+#conrightE4C1-1,
+#conrightE4C1-2,
+#conrightE4C1-3,
+#conrightEStyle {
     min-width: 85px;
     min-height: 30px;
     padding: 0;
@@ -160,15 +165,7 @@ body {
     flex-direction: column;
 }
 
-.conrightA{
-    border: 0;
-}
-
-
-#conrightC1 {
-    width: 100%;
-    min-height: 100%;
-    justify-content: center;
+.conrightA {
     border: 0;
 }
 
@@ -198,7 +195,8 @@ option,
     font-size: 14px;
 }
 
-.list1, .list2 {
+.list1,
+.list2 {
     background-color: #96d4e9;
     padding: 10px 20px;
     color: rgba(0, 0, 0, 0.676);
@@ -209,7 +207,7 @@ option,
     text-wrap: nowrap;
 }
 
-.list2{
+.list2 {
     cursor: default;
 }
 
@@ -223,7 +221,7 @@ option,
     display: inline;
 }
 
-.listE2B{
+.listE2B {
     background-color: #ecb18f;
 }
 
@@ -231,11 +229,11 @@ option,
     background-color: #eff164;
 }
 
-.listE4{
+.listE4 {
     background-color: #cff181;
 }
 
-.listE5{
+.listE5 {
     background-color: #b7f898;
 }
 
@@ -247,11 +245,12 @@ option,
 }
 
 
-.Ldescription{
+.Ldescription {
     text-align: center;
 }
 
-.conrightA .listE2I,  .conrightA .listE4{
+.conrightA .listE2I,
+.conrightA .listE4 {
     text-align: left;
 }
 
@@ -262,9 +261,10 @@ option,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
-.headerAnsEdit{
+.headerAnsEdit {
     background-color: rgb(52, 202, 190);
     border-bottom: #1693c0 5px solid;
 }
@@ -273,3 +273,29 @@ option,
     grid-template-columns: auto;
     grid-template-rows: auto;
 }
+
+.sand-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sand-table tr,
+.sand-table td,
+.sand-table {
+    border-collapse: collapse;
+    border: 3px black solid;
+}
+
+.sand-table td {
+    padding: 30px;
+}
+
+#conrightC1 .Ldescription {
+    display: none;
+}
+
+#conrightC1 {
+    border: 0;
+}
+
+/* ------Test */
