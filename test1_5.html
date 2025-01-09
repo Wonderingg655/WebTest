@@ -20,7 +20,7 @@
         <div id="showAns1"></div>
         <div id="showAns2"></div>
         <div id="showAns3" onclick="window.location.href = 'test1.html'"></div>
-        <div id="showAns4" onclick="window.location.href = 'test1_2.html'"></div>
+        <div id="showAns4" onclick="window.location.href = 'info2.html'"></div>
     </div>
 
     <div class="NavBar">
@@ -52,9 +52,9 @@
 
     <div class="gridContainer gridContainerTest">
         <div id="gridItem1">
-            <div class="headerRight">ข้อที่ 1</div>
+            <div class="headerRight">ข้อที่ 5</div>
             <div class="gridTest">
-                <div class="gridQuestion">ภาษา HTML มีความหมายตรงกับข้อใด</div>
+                <div class="gridQuestion">หน้าหลัก หรือ หน้าแรก (โฮมเพจ) ของภาษา HTML ต้องมีชื่อว่าอะไร</div>
             </div>
         </div>
 
@@ -62,16 +62,16 @@
             <div class="headerRight">ตัวเลือก</div>
             <div id="containerTestChoice">
                 <div id="choice-1" class="choice1" onclick="choice1()" data-choice="1">
-                    <div class="choiceQuiz">เป็นภาษาคอมพิวเตอร์ที่ใช้สำหรับพัฒนาเว็บไซต์</div>
+                    <div class="choiceQuiz">Index.html</div>
                 </div>
                 <div id="choice-4" class="choice4" onclick="choice4()" data-choice="4">
-                    <div class="choiceQuiz">เป็นภาษาที่อธิบายถึงรายละเอียดของโครงสร้างและแบบของข้อมูล</div>
+                    <div class="choiceQuiz">Homepage.docx</div>
                 </div>
                 <div id="choice-2" class="choice2" onclick="choice2()" data-choice="2">
-                    <div class="choiceQuiz">เป็นภาษาคอมพิวเตอร์ที่ใช้สำหรับจัดเก็บข้อมูล</div>
+                    <div class="choiceQuiz">Page1.httml</div>
                 </div>
                 <div id="choice-3" class="choice3" onclick="choice3()" data-choice="3">
-                    <div class="choiceQuiz">เป็นภาษาที่อธิบายถึงรายละเอียดของโครงสร้างและแบบของข้อมูล</div>
+                    <div class="choiceQuiz">Page0.php</div>
                 </div>
             </div>
         </div>
@@ -175,8 +175,8 @@
 
             if (ac == "correct") {
                 showAns1.innerHTML = "<img src='chec.jpg' class='ImgAns'>";
-                showAns2.innerHTML = "<div class='headerTestF headerTestT'>ถูกต้อง</div>";
-                showAns4.innerHTML = "<div class='buttonTestF buttonTestT'>▷ ข้อต่อไป</div>";
+                showAns2.innerHTML = '<div class="headerTestF headerTestT">ยินดีด้วย<br>คุณผ่านการเรียนรู้<br>บทที่ 1 ความรู้เบื้องต้นภาษา HTML<br>คะแนน 5/5 <br></div> ';
+                showAns4.innerHTML = "<div class='buttonTestF buttonTestT'>▷ บทต่อไป</div>";
             } else {
                 showAns1.innerHTML = "<img src='exx.jpg' class='ImgAns'>";
                 showAns2.innerHTML = "<div class='headerTestF'>ผิด</div>";
