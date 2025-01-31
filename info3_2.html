@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
+
+    <title>สื่อการสอนภาษา HTML</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            <div>⏷ บทที่ 3 แท็กภาษา HTML</div>
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
+            </div>
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info3_1.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info3_3.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridContainer gridContainerInfo">
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">3.2 การแทรกรูปภาพ</div>
+            <div class="info1">
+                <div class="infoheader2">แทรกรูปภาพด้วยแท็ก &lt;img></div>
+                &emsp;&emsp;แท็ก &lt;img> ใช้สำหรับแทรกรูปภาพลงในหน้าเว็บ เป็นแท็กที่ไม่มีแท็กปิด โดยมีแอตทริบิวต์ src
+                เพื่อระบุที่อยู่ของไฟล์รูปภาพ &lt;img> จะสามารถระบุที่อยู่ของไฟล์รูปภาพได้ 2 แบบ คือ <br>
+                &emsp;&emsp;1. ระบุจากไฟล์รูปภาพภายในโปรเจกต์ HTML
+                &emsp;&emsp;2. ระบุด้วย url ของรูปภาพจากอินเทอร์เน็ต
+
+                <div class="flexdisplay" style="grid-template-rows: auto; background-color: white; font-size: 21px;">
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1">คำสั่ง</div>
+
+                        <textarea id="con1" class="codebox" onkeyup="run('con1','show1')">ระบุจากไฟล์รูปภาพภายในโปรเจกต์ HTML
+<img src="ball.jpg">
+ระบุด้วย url ของรูปภาพจากอินเทอร์เน็ต
+<img src="https://static.vecteezy.com/vite/assets/photo-masthead-1200-DlryXe9M.webp"></textarea>
+
+                    </div>
+
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1">ผลลัพธ์</div>
+                        <p id="show1"></p>
+                    </div>
+                </div>
+                <div class="buttoninfo" onclick="window.location.href = 'sand3.html'">คลิก
+                    เพื่อทดลองใช้งานด้วยบล็อกคำสั่ง</div>
+
+                <div class="line"></div>
+                <div class="infoheader2">การแทรกลิงก์เป็นรูปภาพด้วยแท็ก &lt;a></div>
+                &emsp;&emsp;แท็ก &lt;a> ใช้สำหรับสร้างลิงก์เชื่อมโยงไปยังหน้าเว็บหรือไฟล์อื่น ๆ
+                โดยมักใช้งานร่วมกับแอตทริบิวต์ href เพื่อระบุที่อยู่ปลายทาง นอกจากนั้น
+                ยังสามารถนำผู้ใช้ไปยังเว็บไซต์หรือส่วนต่างๆ ภายในหน้าเดียวกัน
+
+                <div class="flexdisplay" style="grid-template-rows: auto; background-color: white; font-size: 21px;">
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1">คำสั่ง</div>
+
+                        <textarea id="con2" class="codebox" onkeyup="run('con2','show2')">เข้าสู่ Google<br>
+<a href="https://www.google.co.th"><img src="ball.jpg"></a><br>
+กลับหน้าหลัก<br>
+<a href="index.html"><img src="ball.jpg"></a></textarea>
+
+                    </div>
+
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1">ผลลัพธ์</div>
+                        <p id="show2"></p>
+                        <div style='text-align:center; margin:10px 0;'>
+                            หมายเหตุ เมื่อคลิกที่รูปภาพจะไปสู่เว็บเพจที่กำหนด</div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+        window.onload = runstart();
+
+        function runstart() {
+            for (let i = 1; i < 6; i++) {
+                let a = 'con';
+                a = a.concat(i);
+                let b = 'show';
+                b = b.concat(i);
+                run(a, b);
+            }
+        }
+
+        function run(a, b) {
+            let textCode = document.getElementById(a).value;
+            let show1 = document.getElementById(b);
+            var strHTML1 = '';
+            strHTML1 = strHTML1.concat(textCode);
+            show1.innerHTML = strHTML1;
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+</body>
+
+
+</html>

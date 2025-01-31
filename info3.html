@@ -9,49 +9,70 @@
 
     <link rel="stylesheet" href="style3.css">
     <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
 
-    <script type="text/javascript">
-        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
-             run();
-             alert("1");
-         }, 500);*/
-    </script>
-
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 3 คำสั่งภาษา HTML 2
+            <div>⏷ บทที่ 3 แท็กภาษา HTML</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'sand3.html'">
-            หน้าต่อไป ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'index.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info3_1.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
         </div>
     </div>
 
     <div class="gridContainer gridContainerInfo">
-        <div id="gridItem1">
-            <div class="headerRight">บทที่ 3 คำสั่งภาษา HTML 2</div>
-            info3
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">บทที่ 3 แท็กภาษา HTML</div>
+            <div class="info1">
+                &emsp;&emsp;แท็ก (Tag) คือคำสั่งที่ใช้ในการกำหนดและจัดรูปแบบองค์ประกอบต่างๆ บนเว็บเพจ
+                โดยแต่ละแท็กจะมีการเปิดและปิด เช่น &lt;h1> &lt;/h1>, &lt;p> &lt;/p>, &lt;div> &lt;/div>
+                แท็กช่วยให้เว็บเบราว์เซอร์สามารถรู้ว่าเนื้อหานั้นๆ ควรแสดงผลในรูปแบบไหน หรือมีฟังก์ชันอะไร
+                ซึ่งแท็กบางตัวอาจมีแอตทริบิวต์เพิ่มเติมเพื่อกำหนดลักษณะเฉพาะ เช่น ขนาด สี หรือการเชื่อมโยงกับข้อมูลอื่น
+                ๆ
+                <div class="line"></div>
+                <div class="infoheader2">จุดประสงค์การเรียนรู้</div>
+                &emsp;&emsp;1. แทรกข้อความลงสู่เว็บเพจได้<br>
+                &emsp;&emsp;2. แทรกรูปภาพลงสู่เว็บเพจได้<br>
+                &emsp;&emsp;3. แทรกลิงก์เชื่อมต่อระหว่างเว็บเพจลงสู่เว็บเพจได้<br>
+                &emsp;&emsp;4. แทรกตารางลงสู่เว็บเพจได้
+                
+                <div class="line"></div>
+                <div class="infoheader2">สาระการเรียนรู้</div>
+                &emsp;&emsp;1. การแทรกข้อความ<br>
+                &emsp;&emsp;2. กาารแทรกรูปภาพ<br>
+                &emsp;&emsp;3. การแทรกตาราง
+
+            </div>
         </div>
     </div>
 

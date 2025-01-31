@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
+
+    <title>สื่อการสอนภาษา HTML</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            <div>⏷ บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML</div>
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
+            </div>
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info1.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info1_2.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridContainer gridContainerInfo">
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">1.1 อินเทอร์เน็ตและเวิลด์ไวด์เว็บ</div>
+            <div class="info1">
+                <div class="infoheader2" style="margin-top: -5px;">อินเทอร์เน็ต คืออะไร</div>
+                &emsp;&emsp; อินเทอร์เน็ตคือเครือข่ายขนาดใหญ่ที่เชื่อมโยงคอมพิวเตอร์และอุปกรณ์ต่างๆ
+                ทั่วโลกเข้าด้วยกันผ่านระบบการสื่อสารข้อมูล ซึ่งช่วยให้ผู้คนแลกเปลี่ยนข้อมูล ส่งข้อความ ค้นหาความรู้
+                และใช้บริการต่างๆ เช่น อีเมล โซเชียลมีเดีย และการซื้อขายออนไลน์ได้อย่างสะดวกรวดเร็ว
+                และมีบทบาทสำคัญในชีวิตประจำวัน รวมถึงการพัฒนาด้านเศรษฐกิจ การศึกษา และเทคโนโลยีในสังคมสมัยใหม่
+                <img src="1-1.jpg" alt="" class="img">
+                <div class="imgfrom">หมายเหตุ. จาก https://miro.medium.com/v2/resize:fit:1062/0*kSHw8xHkmvXa5Jyy</div>
+                <div class="line"></div>
+                <div class="infoheader2">เวิลด์ไวด์เว็บ คืออะไร</div>
+                &emsp;&emsp;เวิลด์ไวด์เว็บ WWW หรือ World Wide Web คือระบบข้อมูลที่เชื่อมโยงกันบนอินเทอร์เน็ต
+                ซึ่งช่วยให้ผู้ใช้งานสามารถเข้าถึงและแลกเปลี่ยนข้อมูลผ่านหน้าเว็บเพจที่ออกแบบด้วยภาษา HTML โดยใช้โปรโตคอล
+                HTTP ในการส่งข้อมูล
+                เว็บเพจเหล่านี้สามารถเข้าถึงได้ผ่านโปรแกรมเว็บเบราว์เซอร์และมีการเชื่อมโยงกันด้วยลิงก์
+                ทำให้ผู้ใช้งานสามารถค้นหาและเข้าถึงข้อมูลต่างๆ ได้อย่างง่ายดาย WWW
+                เป็นส่วนสำคัญของอินเทอร์เน็ตที่เปลี่ยนแปลงการสื่อสารและการแบ่งปันข้อมูลในยุคดิจิทัลอย่างมาก
+                <img src="1-12.jpg" alt="" class="img" height="300px">
+                <div class="imgfrom">หมายเหตุ. จาก
+                    https://www.dgmu.ru/18492336/Web-Part-2-Creating-a-new-economic-Era-by-by-MiRev.html</div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+</body>
+
+
+</html>

@@ -9,53 +9,68 @@
 
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
 
-    <script type="text/javascript">
-        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
-             run();
-             alert("1");
-         }, 500);*/
-    </script>
-
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div>⏷ บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'test1.html'">
-            แบบฝึกหัด ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'index.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info1_1.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
         </div>
     </div>
 
     <div class="gridContainer gridContainerInfo">
-        <div id="gridItem1">
-            <div class="headerRight">บทที่ 1 ความรู้เบื้องต้นภาษา HTML</div>
-            HTML
-            head
-            title
-            body
-            div
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML</div>
+            <div class="info1">
+                &emsp;&emsp;อินเทอร์เน็ตเป็นเครือข่ายคอมพิวเตอร์ขนาดใหญ่ที่เชื่อมโยงอุปกรณ์ต่างๆ
+                ทั่วโลกเพื่อแลกเปลี่ยนข้อมูลและให้บริการต่างๆ ส่วนเว็บเพจคือหน้าเอกสารที่ถูกสร้างขึ้นด้วยภาษา HTML
+                ซึ่งสามารถเข้าถึงได้ผ่านเว็บบราวเซอร์ โดยใช้ URL เป็นตัวระบุที่อยู่ของเว็บเพจนั้นๆ
+                การทำงานของเว็บเพจส่วนใหญ่จะเกี่ยวข้องกับการแสดงผลข้อมูล เช่น ข้อความ, ภาพ, วิดีโอ และฟังก์ชันต่างๆ
+                เพื่อให้ผู้ใช้สามารถเข้าถึงและโต้ตอบกับข้อมูลเหล่านั้นได้อย่างสะดวก
+                <div class="line"></div>
+                <div class="infoheader2">จุดประสงค์การเรียนรู้</div>
+                &emsp;&emsp;1. อธิบายความรู้เบื้องต้นเกี่ยวกับอินเทอร์เน็ตและเว็บไซต์ได้ถูกต้อง<br>
+                &emsp;&emsp;2. บอกส่วนประกอบและประเภทของเว็บเพจได้ถูกต้อง<br>
+                &emsp;&emsp;3. อธิบายความรู้เบื้องต้นเกี่ยวกับภาษา HTML ได้ถูกต้อง
+                <div class="line"></div>
+                <div class="infoheader2">สาระการเรียนรู้</div>
+                &emsp;&emsp;1. อินเทอร์เน็ตและเว็บไซต์<br>
+                &emsp;&emsp;2. รู้จักเว็บเพจ<br>
+                &emsp;&emsp;3. รู้จักภาษา HTML
+
+            </div>
         </div>
     </div>
 

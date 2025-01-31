@@ -1,81 +1,3 @@
-@font-face {
-    font-family: Kanit;
-    src: url(Kanit-Regular.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Kanit';
-    box-sizing: border-box;
-    font-size: 18px;
-}
-
-body {
-    background-color: aliceblue;
-}
-
-/* nav---------- */
-
-.NavBar {
-    background-color: #16b8c0;
-    font-weight: 900;
-    height: 10vh;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.classDropdown {
-    top: 210px;
-    opacity: 0;
-    visibility: hidden;
-
-    left: 280px;
-    right: auto;
-    position: fixed;
-    background-color: #16b8c0;
-
-    transform: translate(-50%, -50%);
-    z-index: 4;
-    transition: 0.4s;
-}
-
-.classDropdown div {
-    width: 100%;
-    padding: 10px 30px;
-    font-size: 23px;
-    cursor: pointer;
-}
-
-.dropdownHeader {
-    cursor: pointer;
-    padding: 0 25px;
-    font-size: 25px;
-    height: 100%;
-    margin-left: 41px;
-    margin-right: 41px;
-    line-height: 10vh;
-    background-color: #23d3c488;
-}
-
-.classDropdown div:hover,
-.dropdownHeader:hover {
-    background-color: #23d3c4;
-    transition: 0.4s
-}
-
-.openDropdown {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* nav---------- */
-
 .gridContainer {
     display: grid;
     grid-template-columns: 45% auto;
@@ -267,8 +189,7 @@ option,
 
 .conrightA .conrightA2,
 .conrightA .conrightB2 {
-    width: 700px;
-    min-height: 590px;
+    min-height: 550px;
     padding: 15px;
 
 }
@@ -282,11 +203,6 @@ option,
     border-bottom: #1693c0 5px solid;
 }
 
-.gridContainerInfo {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-}
-
 #textL5C1 {
     margin-top: 6px;
 }
@@ -297,4 +213,20 @@ option,
 
 #conrightC1 .Ldescription {
     display: none;
+}
+
+#conrightC1 .list2,
+#conrightC1 .conrightA,
+#conrightC1 .conrightA2 {
+    width: 100%;
+}
+
+
+@media screen and (max-height:800px) {
+
+    #conright,
+    #conrightE {
+        min-height: 18.5px;
+        min-width: 47px;
+    }
 }

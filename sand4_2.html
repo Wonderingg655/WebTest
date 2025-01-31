@@ -17,34 +17,42 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div>⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'test4.html'">
-            หน้าต่อไป ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'sand4.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'test4.html'">
+                <div>แบบฝึกหัด ⯈</div>
+            </div>
         </div>
     </div>
 
@@ -75,7 +83,7 @@
 
         <div class="conans" id="gridItem2">
             <div class="headerAns" id="headerAns">
-                <div></div>ผลลัพธ์
+                ผลลัพธ์
             </div>
             <p id="show1"></p>
         </div>
@@ -86,11 +94,10 @@
 
                 <div class="list1 listE3 listE2I" id="L6C1" draggable="true">
                     <div>
-                        &lt;img <div style="display: inline;
-                        border: 3px solid #1693c0bb; padding: 0 10px;">src=&#34;ball.jpg&#34;</div>
-                        <div id="conrightE3"></div> &gt; 
+                        &lt;img <div class="imgText">src=&#34;ball.jpg&#34;</div>
+                        <div id="conrightE3"></div> &gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกรูปภาพ</div>
+                    <div class="Ldescription">แท็กแทรกรูปภาพ</div>
                 </div>
 
                 <div class="list1 listE4" id="L8C1" draggable="true">
@@ -103,23 +110,48 @@
 
                 <div class="list1 listE5" id="L13C1" draggable="true">
                     height:
-                    <input type="text" id="DropdownMenu5" onkeyup="run();" value="300px">
+                    <input type="text" id="DropdownMenu5" onkeyup="run();" value="300px" class="text">
                     &nbsp;; <br>
                     <p class="Ldescription">ปรับความสูง</p>
                 </div>
 
                 <div class="list1 listE5" id="L14C1" draggable="true">
                     width:
-                    <input type="text" id="DropdownMenu6" onkeyup="run();" value="300px">
+                    <input type="text" id="DropdownMenu6" onkeyup="run();" value="300px" class="text">
                     &nbsp;; <br>
                     <p class="Ldescription">ปรับความกว้าง</p>
                 </div>
 
                 <div class="list1 listE5" id="L15C1" draggable="true">
                     margin:
-                    <input type="text" id="DropdownMenu7" onkeyup="run();" value="30px">
+                    <input type="text" id="DropdownMenu7" onkeyup="run();" value="30px" class="text">
                     &nbsp;; <br>
                     <p class="Ldescription">ปรับระยะห่าง</p>
+                </div>
+
+                <div class="list1 listE5" id="L15C2" draggable="true">
+                    margin-top:
+                    <input type="text" id="DropdownMenu8" onkeyup="run();" value="30px" class="text">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับระยะห่างด้านบน</p>
+                </div>
+                <div class="list1 listE5" id="L15C3" draggable="true">
+                    margin-bottom:
+                    <input type="text" id="DropdownMenu9" onkeyup="run();" value="30px" class="text">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับระยะห่างด้านล่าง</p>
+                </div>
+                <div class="list1 listE5" id="L15C4" draggable="true">
+                    margin-right:
+                    <input type="text" id="DropdownMenu10" onkeyup="run();" value="30px" class="text">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับระยะห่างด้านขวา</p>
+                </div>
+                <div class="list1 listE5" id="L15C5" draggable="true">
+                    margin-left:
+                    <input type="text" id="DropdownMenu11" onkeyup="run();" value="30px" class="text">
+                    &nbsp;; <br>
+                    <p class="Ldescription">ปรับระยะห่างด้านซ้าย</p>
                 </div>
             </div>
         </div>
@@ -214,7 +246,7 @@
                     e.preventDefault();
                 });
                 rightBoxEStyle.addEventListener("drop", function (e) {
-                    if ((selected.id == "L9C1" || selected.id == "L10C1" || selected.id == "L11C1" || selected.id == "L12C1" || selected.id == "L13C1" || selected.id == "L14C1" || selected.id == "L15C1") && rightBoxEStyle.childElementCount < 10) { //limit item in continer 
+                    if ((selected.id == "L9C1" || selected.id == "L10C1" || selected.id == "L11C1" || selected.id == "L12C1" || selected.id == "L13C1" || selected.id == "L14C1" || selected.id == "L15C1" || selected.id == "L15C2" || selected.id == "L15C3" || selected.id == "L15C4" || selected.id == "L15C5") && rightBoxEStyle.childElementCount < 10) { //limit item in continer 
                         rightBoxEStyle.appendChild(selected);
                         selected = null;
                         run();
@@ -234,6 +266,10 @@
             var text5 = DropdownMenu5.value;
             var text6 = DropdownMenu6.value;
             var text7 = DropdownMenu7.value;
+            var text8 = DropdownMenu8.value;
+            var text9 = DropdownMenu9.value;
+            var text10 = DropdownMenu10.value;
+            var text11 = DropdownMenu11.value;
 
             const contains = (parent, child) => {
                 return parent !== child && parent.contains(child);
@@ -247,6 +283,14 @@
                         textStyle = textStyle.concat("width:", text6, ";");
                     if (contains(rightBoxEStyle, DropdownMenu7))
                         textStyle = textStyle.concat("margin:", text7, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu8))
+                        textStyle = textStyle.concat("margin-top:", text8, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu9))
+                        textStyle = textStyle.concat("margin-bottom:", text9, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu10))
+                        textStyle = textStyle.concat("margin-right:", text10, ";");
+                    if (contains(rightBoxEStyle, DropdownMenu11))
+                        textStyle = textStyle.concat("margin-left:", text11, ";");
                 }
                 textApp = textApp.concat('<img src="ball.jpg" style="', textStyle, '">');
             }
@@ -255,6 +299,8 @@
             //     textApp = textApp.concat("background-color:", text1, ";");
 
             // textApp = textApp.concat('"');
+            if(textApp.includes("margin"))
+                textApp = textApp.concat("<div style='text-align:center; margin-top:50px;'>หมายเหตุ ภาพนี้ตกแต่งขึ้นเพื่อให้ง่ายต่อการเข้าใจในบทเรียนเท่านั้น</div>");
             show(textApp);
         }
 

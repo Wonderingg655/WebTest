@@ -16,34 +16,42 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 3 คำสั่งภาษา HTML 2
+            <div>⏷ บทที่ 3 แท็กภาษา HTML 2</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'sand3_2.html'">
-            หน้าต่อไป ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info3_3.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'sand3_2.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
         </div>
     </div>
 
@@ -60,6 +68,7 @@
                             <div class="list2" id="L3C1">
                                 <div>&lt;<div class="listE2">body</div>&gt;</div>
                                 <div id="conrightE2B" class="conrightA2"></div>
+                                
                                 <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
                             </div>
 
@@ -85,33 +94,42 @@
 
                 <div class="list1 listE3 listE2I" id="L5C1" draggable="true">
                     <div>
-                        &lt;div&gt;
-                        <input type="text" id="textL5C1" onkeyup="run();" value="Hello World">
-                        &lt;&#47;div&gt;
+                        &lt;p&gt;
+                        <input type="text" id="textL5C1" onkeyup="run();" value="Hello World" class="text">
+                        &lt;&#47;p&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกกล่องข้อความ</div>
+                    <div class="Ldescription">แท็กกำหนดย่อหน้า</div>
                 </div>
                 <div class="list1 listE3 listE2I" id="L6C1" draggable="true">
                     <div>
-                        &lt;img <div style="display: inline;
-                        border: 3px solid #1693c0bb; padding: 0 10px;">src=&#34;ball.jpg&#34; </div>&gt;
+                        &lt;img <div class="imgText">src=&#34;ball.jpg&#34; </div>&gt;
                         &lt;&#47;img&gt;
                     </div>
 
-                    <div class="Ldescription">คำสั่งแทรกรูปภาพ</div>
+                    <div class="Ldescription">แท็กแทรกรูปภาพ</div>
                 </div>
 
                 <div class="list1 listE3 listE2I" id="L7C1" draggable="true">
                     <div>
                         <div>
                             &lt;a href = " <input type="text" id="textL7C1" onkeyup="run();"
-                                value="https://www.google.co.th" style="width: 250px;"> " &gt;
-                            <input type="text" id="textL7C2" onkeyup="run();" value="ไปสู่เว็บไซต์">
+                                value="https://www.google.co.th" class="textL7C1"> " &gt;
+                            <input type="text" id="textL7C2" onkeyup="run();" value="ไปสู่เว็บไซต์" class="text">
                             &lt;&#47;a&gt;
                         </div>
                     </div>
+                    <div class="Ldescription">แท็กแทรกลิงก์ไปสู่เว็บเพจ</div>
+                </div>
 
-                    <div class="Ldescription">คำสั่งแทรกลิงก์ไปสู่เว็บไซต์</div>
+                <div class="list1 listE3 listE2I" id="L8C1" draggable="true">
+                    <div>
+                        <div>
+                            &lt;h1&gt;
+                            <input type="text" id="textL8C1" onkeyup="run();" value="Hello World" class="text">
+                            &lt;&#47;h1&gt;
+                        </div>
+                    </div>
+                    <div class="Ldescription">แท็กแทรกหัวเรื่องใหญ่</div>
                 </div>
             </div>
         </div>
@@ -178,7 +196,7 @@
                     e.preventDefault();
                 });
                 rightBoxE2B.addEventListener("drop", function (e) {
-                    if ((selected.id == "L5C1" || selected.id == "L6C1" || selected.id == "L7C1") && rightBoxE2B.childElementCount < 10) { //limit item in continer 
+                    if ((selected.id == "L5C1" || selected.id == "L6C1" || selected.id == "L7C1" || selected.id == "L8C1") && rightBoxE2B.childElementCount < 10) { //limit item in continer 
                         rightBoxE2B.appendChild(selected);
                         selected = null;
                         run();
@@ -209,6 +227,9 @@
             var textLink1 = textL7C1.value;
             var textLink2 = textL7C2.value;
 
+            let textL8C1 = document.getElementById("textL8C1");
+            var textH1 = textL8C1.value;
+
             const contains = (parent, child) => {
                 return parent !== child && parent.contains(child);
             }
@@ -217,13 +238,16 @@
 
                 if (contains(rightBoxE, rightBoxE2B)) {
                     if (contains(rightBoxE2B, textL5C1)) {
-                        textApp = textApp.concat('<div style="font-size: 30px;">', textDiv, '</div>');
+                        textApp = textApp.concat('<div style="font-size: 20px;">', textDiv, '</div>');
                     }
                     if (contains(rightBoxE2B, textL6C1)) {
                         textApp = textApp.concat(textImg);
                     }
                     if (contains(rightBoxE2B, textL7C1)) {
                         textApp = textApp.concat('<a href="',textLink1,'" target="_blank" style="font-size: 30px; display:block;">',textLink2,'</a>');
+                    }
+                    if (contains(rightBoxE2B, textL8C1)) {
+                        textApp = textApp.concat('<h1 style = "font-size: 40px;">', textH1, '</h1>');
                     }
                 }
 

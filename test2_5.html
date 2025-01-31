@@ -17,7 +17,7 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
@@ -32,28 +32,31 @@
 
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 2 คำสั่งภาษา HTML 1
+            <div>⏷ บทที่ 2 โครงสร้างภาษา HTML</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
         <div class="dropdownHeader" onclick="checkAns()">
-            ส่งคำตอบ ⯈
+            <div>ส่งคำตอบ ⯈</div>
         </div>
     </div>
 
@@ -197,7 +200,7 @@
 
             if (ac == "correct") {
                 showAns1.innerHTML = "<img src='chec.jpg' class='ImgAns'>";
-                showAns2.innerHTML = '<div class="headerTestF headerTestT">ยินดีด้วย<br>คุณผ่านการเรียนรู้<br>บทที่ 2 คำสั่งภาษา HTML 1<br>คะแนน 5/5 <br></div> ';
+                showAns2.innerHTML = '<div class="headerTestF headerTestT">ยินดีด้วย<br>คุณผ่านการเรียนรู้<br>บทที่ 2 โครงสร้างภาษา HTML<br>คะแนน 5/5 <br></div> ';
                 showAns4.innerHTML = "<div class='buttonTestF buttonTestT'>▷ บทต่อไป</div>";
             } else {
                 showAns1.innerHTML = "<img src='exx.jpg' class='ImgAns'>";

@@ -7,55 +7,71 @@
 
     <script src="DragDropTouch.js" charset="utf-8"> </script>
 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
 
-    <script type="text/javascript">
-        /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
-             run();
-             alert("1");
-         }, 500);*/
-    </script>
-
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 2 คำสั่งภาษา HTML 1
+            <div>⏷ บทที่ 2 โครงสร้างภาษา HTML</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-           <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'sand2.html'">
-            หน้าต่อไป ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'index.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info2_1.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
         </div>
     </div>
 
     <div class="gridContainer gridContainerInfo">
-        <div id="gridItem1">
-            <div class="headerRight">บทที่ 2 คำสั่งภาษา HTML 1</div>
-            HTML
-            head
-            title
-            body
-            div
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">บทที่ 2 โครงสร้างภาษา HTML</div>
+            <div class="info1">
+                &emsp;&emsp;ภาษ HTML เป็นภาษาใช้ในการสร้างและจัดโครงสร้างเนื้อหาบนเว็บเพจ
+                โดยใช้แท็กต่างๆ เพื่อกำหนดองค์ประกอบต่างๆ เช่น ข้อความ, รูปภาพ, ลิงก์, ฟอร์ม และอื่นๆ
+                โครงสร้างพื้นฐานของ HTML ประกอบด้วยแท็กเปิด &lt;html>, &lt;head>, และ &lt;body> 
+                ภายใน &lt;head> จะบรรจุข้อมูลที่เกี่ยวกับเว็บไซต์ เช่น ชื่อหน้าเว็บ หรือข้อมูลเมตา &lt;meta> ขณะที่
+                &lt;body> จะเป็นส่วนที่แสดงผลเนื้อหาจริงที่ผู้ใช้เห็นบนหน้าเว็บ. ทุกๆ
+                เนื้อหาหรือองค์ประกอบจะถูกล้อมรอบด้วยแท็กที่เหมาะสม เช่น &lt;h1> สำหรับหัวข้อ, &lt;p>
+                สำหรับย่อหน้า, หรือ &lt;img> สำหรับแสดงรูปภาพ.
+                <div class="line"></div>
+                <div class="infoheader2">จุดประสงค์การเรียนรู้</div>
+                &emsp;&emsp;1. อธิบายและเข้าใจโครงสร้างภาษา HTML ได้ถูกต้อง
+                <div class="line"></div>
+                <div class="infoheader2">สาระการเรียนรู้</div>
+                &emsp;&emsp;1. โครงสร้างภาษา HTML คืออะไร<br>
+                &emsp;&emsp;&emsp;1.1 คำสั่งเริ่มต้นของเอกสาร HTML &lt;html><br>
+                &emsp;&emsp;&emsp;1.2 ส่วนหัว  &lt;head><br>
+                &emsp;&emsp;&emsp;1.3 ส่วนเนื้อหา &lt;body>
+
+            </div>
         </div>
     </div>
 

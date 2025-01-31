@@ -18,34 +18,42 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 2 คำสั่งภาษา HTML 1
+            <div>⏷ บทที่ 2 แท็กภาษา HTML 1</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 คำสั่งภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'test2.html'">
-            แบบฝึกหัด ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info2_1.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'test2.html'">
+                <div>แบบฝึกหัด ⯈</div>
+            </div>
         </div>
     </div>
 
@@ -92,27 +100,26 @@
                 <div class="list1 listE3 listE2I" id="L4C1" draggable="true">
                     <div>
                         &lt;title&gt;
-                        <input type="text" id="textL4C1" onkeyup="run();" value="Title">
+                        <input type="text" id="textL4C1" onkeyup="run();" value="Title" class="text">
                         &lt;&#47;title&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแสดงไตเติ้ลของเว็บเพจ</div>
+                    <div class="Ldescription">แท็กแสดงไตเติ้ลของเว็บเพจ</div>
                 </div>
                 <div class="list1 listE3 listE2I" id="L5C1-1" draggable="true">
                     <div>
                         &lt;div&gt;
-                        <input type="text" id="textL5C1-1" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL5C1-1" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;div&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกกล่องข้อความ</div>
+                    <div class="Ldescription">แท็กแทรกกล่องข้อความ</div>
                 </div>
                 <div class="list1 listE3 listE2I" id="L5C1-2" draggable="true">
                     <div>
-                        &lt;img <div style="display: inline;
-                        border: 3px solid #1693c0bb; padding: 0 10px;">src=&#34;ball.jpg&#34; </div>&gt;
+                        &lt;img <div class="imgText">src=&#34;ball.jpg&#34; </div>&gt;
                         &lt;&#47;img&gt;
                     </div>
 
-                    <div class="Ldescription">คำสั่งแทรกรูปภาพ</div>
+                    <div class="Ldescription">แท็กแทรกรูปภาพ</div>
                 </div>
             </div>
         </div>
@@ -224,7 +231,7 @@
 
                 if (contains(rightBoxE, rightBoxE2B)) {
                     if (contains(rightBoxE2B, textL5C1)) {
-                        textApp = textApp.concat('<div style="font-size: 30px;">', textDiv, '</div>');
+                        textApp = textApp.concat('<div style="font-size: 20px;">', textDiv, '</div>');
                     }
                     if (contains(rightBoxE2B, textL6C1)) {
                         textApp = textApp.concat(textImg);
@@ -279,9 +286,9 @@
                 container.appendChild(sortMe[i][1]);
             }
         }
-            
-            
-        
+
+
+
 
         // let listE1 = document.getElementById("L1C1");
 

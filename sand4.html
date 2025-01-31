@@ -17,34 +17,42 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div>⏷ บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'sand4_2.html'">
-            หน้าต่อไป ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info4_2.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'sand4_2.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
         </div>
     </div>
 
@@ -86,11 +94,11 @@
 
                 <div class="list1 listE3 listE2I" id="L5C1" draggable="true">
                     <div>
-                        <div>&lt;div <div id="conrightE3"></div> &gt; </div>
-                        <input type="text" id="textL5C1" onkeyup="run();" value="Hello World">
-                        <div>&lt;/div&gt;</div>
+                        <div>&lt;p <div id="conrightE3"></div> &gt; </div>
+                        <input type="text" id="textL5C1" onkeyup="run();" value="Hello World" class="text">
+                        <div>&lt;/p&gt;</div>
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกกล่องข้อความ</div>
+                    <div class="Ldescription">แท็กกำหนดย่อหน้า</div>
                 </div>
 
                 <div class="list1 listE4" id="L8C1" draggable="true">
@@ -149,30 +157,9 @@
 
                 <div class="list1 listE5" id="L12C1" draggable="true">
                     font-size:
-                    <input type="text" id="DropdownMenu4" onkeyup="run();" value="50px">
+                    <input type="text" id="DropdownMenu4" onkeyup="run();" value="50px" class="text">
                     &nbsp;; <br>
                     <p class="Ldescription">ปรับขนาดตัวอักษร</p>
-                </div>
-
-                <div class="list1 listE5" id="L13C1" draggable="true">
-                    height:
-                    <input type="text" id="DropdownMenu5" onkeyup="run();" value="300px">
-                    &nbsp;; <br>
-                    <p class="Ldescription">ปรับความสูง</p>
-                </div>
-
-                <div class="list1 listE5" id="L14C1" draggable="true">
-                    width:
-                    <input type="text" id="DropdownMenu6" onkeyup="run();" value="300px">
-                    &nbsp;; <br>
-                    <p class="Ldescription">ปรับความกว้าง</p>
-                </div>
-
-                <div class="list1 listE5" id="L15C1" draggable="true">
-                    margin:
-                    <input type="text" id="DropdownMenu7" onkeyup="run();" value="30px">
-                    &nbsp;; <br>
-                    <p class="Ldescription">ปรับระยะห่าง</p>
                 </div>
             </div>
         </div>
@@ -266,7 +253,7 @@
                     e.preventDefault();
                 });
                 rightBoxEStyle.addEventListener("drop", function (e) {
-                    if ((selected.id == "L9C1" || selected.id == "L10C1" || selected.id == "L11C1" || selected.id == "L12C1" || selected.id == "L13C1" || selected.id == "L14C1" || selected.id == "L15C1") && rightBoxEStyle.childElementCount < 10) { //limit item in continer 
+                    if ((selected.id == "L9C1" || selected.id == "L10C1" || selected.id == "L11C1" || selected.id == "L12C1") && rightBoxEStyle.childElementCount < 10) { //limit item in continer 
                         rightBoxEStyle.appendChild(selected);
                         selected = null;
                         run();
@@ -290,9 +277,6 @@
             var text2 = DropdownMenu2.options[DropdownMenu2.selectedIndex].text;
             var text3 = DropdownMenu3.options[DropdownMenu3.selectedIndex].text;
             var text4 = DropdownMenu4.value;
-            var text5 = DropdownMenu5.value;
-            var text6 = DropdownMenu6.value;
-            var text7 = DropdownMenu7.value;
 
             const contains = (parent, child) => {
                 return parent !== child && parent.contains(child);
@@ -308,14 +292,8 @@
                         textStyle = textStyle.concat("text-align:", text3, ";");
                     if (contains(rightBoxEStyle, DropdownMenu4))
                         textStyle = textStyle.concat("font-size:", text4, ";");
-                    if (contains(rightBoxEStyle, DropdownMenu5))
-                        textStyle = textStyle.concat("height:", text5, ";");
-                    if (contains(rightBoxEStyle, DropdownMenu6))
-                        textStyle = textStyle.concat("width:", text6, ";");
-                    if (contains(rightBoxEStyle, DropdownMenu7))
-                        textStyle = textStyle.concat("margin:", text7, ";");
                 }
-                textApp = textApp.concat('<div style=" font-size: 30px;', textStyle, '">', textDiv, '</div>');
+                textApp = textApp.concat('<p style=" font-size: 20px;', textStyle, '">', textDiv, '</p>');
             }
 
             // if (rightBoxE.querySelector("#L2C1") != null)

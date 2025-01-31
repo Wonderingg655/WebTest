@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
+
+    <title>สื่อการสอนภาษา HTML</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            <div>⏷ บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML</div>
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
+            </div>
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info1_1.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'info1_3.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridContainer gridContainerInfo">
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">1.2 รู้จักเว็บไซต์และเว็บเพจ</div>
+            <div class="info1">
+                <div class="infoheader2" style="margin-top: -5px;">เว็บไซต์ คืออะไร</div>
+                &emsp;&emsp; เว็บไซต์ คือหน้าเว็บเพจหลายหน้า ซึ่งเชื่อมโยงกันผ่านทางไฮเปอร์ลิงก์
+                ส่วนใหญ่จัดทำขึ้นเพื่อนำเสนอข้อมูลผ่านคอมพิวเตอร์ โดยถูกจัดเก็บไว้ในเวิลด์ไวด์เว็บ
+                หน้าแรกของเว็บไซต์ที่เก็บไว้ที่ชื่อหลักจะเรียกว่า โฮมเพจ เว็บไซต์โดยทั่วไปจะให้บริการต่อผู้ใช้ฟรี
+                แต่ในขณะเดียวกันบางเว็บไซต์จำเป็นต้องมีการสมัครสมาชิกและเสียค่าบริการเพื่อที่จะดูข้อมูล ในเว็บไซต์นั้น
+                ซึ่งได้แก่ข้อมูลทางวิชาการ ข้อมูลตลาดหลักทรัพย์ หรือข้อมูลสื่อต่าง ๆ ผู้ทำเว็บไซต์มีหลากหลายระดับ
+                ตั้งแต่สร้างเว็บไซต์ส่วนตัว จนถึงระดับเว็บไซต์สำหรับธุรกิจหรือองค์กรต่าง ๆ
+                การเรียกดูเว็บไซต์โดยทั่วไปนิยมเรียกดูผ่านซอฟต์แวร์ในลักษณะของเว็บเบราว์เซอร์
+                <div class="line"></div>
+                <div class="infoheader2">เว็บเพจ คืออะไร</div>
+                &emsp;&emsp;เว็บเพจ หรือหน้าเว็บ คือเอกสารเว็บชนิดหนึ่งเหมาะสำหรับเวิลด์ไวด์เว็บและเว็บเบราว์เซอร์
+                เว็บเบราว์เซอร์จะแสดงเว็บเพจบนจอคอมพิวเตอร์หรืออุปกรณ์เคลื่อนที่ เว็บเพจก็คือสิ่งที่ปรากฏออกมา
+                แต่ศัพท์นี้ก็ยังหมายถึงแฟ้มคอมพิวเตอร์ที่มักจะเขียนเป็นเอชทีเอ็มแอลหรือภาษามาร์กอัปที่เทียบเคียงได้
+                ซึ่งมีลักษณะเด่นอันเป็นหลักก็คือ การจัดเตรียมข้อความหลายมิติที่จะนำไปสู่ เว็บเพจอื่น ผ่านทางลิงก์
+                เว็บเบราว์เซอร์จะประสานงานกับทรัพยากรเว็บที่อยู่โดยรอบเว็บเพจที่เขียน เช่น สไตล์ชีต สคริปต์ และรูปภาพ
+                เพื่อนำเสนอเว็บเพจนั้น
+                <br>
+                ส่วนประกอบของว็บเพจแบ่งออกเป็น 3 ส่วน ดังนี้ <br>
+                &emsp;&emsp;1. ส่วนหัว (Page Header) จะอยู่บริเวณบนสุดของหน้าเว็บเพจ เป็นส่วนที่แสดงชื่อเว็บไซต์ โลโก้
+                แบนเนอร์โฆษณาลิงก์สําหรับข้ามไปยังหน้าเว็บอื่น
+                <br>&emsp;&emsp;2. ส่วนเนื้อหา (Page Body) จะอยู่บริเวณตอนกลางของหน้าเว็บเพจ
+                ซึ่งเป็นส่วนที่แสดงเนื้อหาภายใน
+                หน้าเว็บเพจนั้น โดยประกอบด้วยข้อความ ข้อมูล ภาพเคลื่อนไหว เป็นต้น
+                <br>&emsp;&emsp;3. ส่วนท้าย (Page Footer) จะอยู่บริเวณด้านล่างสุดของหน้าเว็บเพจ
+                ส่วนมากใช้สําหรับลิงก์ข้อความ สั้น ๆ
+                เข้าใจง่าย หรือจะมีชื่อเจ้าของเว็บไซต์ อีเมลแอดเดรสของผู้ดูแลเว็บไซต์สําหรับติดต่อกับทางเว็บไซต์
+
+                <div class="flexdisplay" style="grid-template-rows: auto; background-color: white;">
+                    <div class="displaychildren" style="cursor: default;"><img src="1-22.png" alt="" width="80%"
+                            class="img">
+                        <div class="imgfrom" style="margin-top: 10px;">หมายเหตุ. จาก
+                            https://en.wikipedia.org/wiki/Web_page</div>
+                    </div>
+                    <div class="displaychildren" style="cursor: default;"
+                        style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                        <img src="1-23.png" alt="" width="80%" class="img">
+                        <div class="imgfrom" style="margin-top: 10px;">หมายเหตุ. จาก
+                            https://wordpress.com/</div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="infoheader2">รูปแบบของเว็บไซต์</div>
+                รูปแบบของเว็บไซต์แบ่งออกเป็น 2 รูปแบบ ดังนี<br>
+                &emsp;&emsp;1. เว็บไซต์ Static คือเว็บไซต์ที่มีเนื้อหาคงที่ สร้างด้วย HTML, CSS และบางครั้ง JavaScript
+                โดยไม่มีการดึงข้อมูลจากเซิร์ฟเวอร์หรือฐานข้อมูล เนื้อหาแสดงผลเหมือนเดิมทุกครั้งที่เข้าชม
+                เหมาะสำหรับเว็บไซต์ที่ไม่ต้องอัปเดตบ่อย เช่น พอร์ตโฟลิโอ ข้อดีคือโหลดเร็ว ค่าใช้จ่ายต่ำ และดูแลง่าย
+                แต่ไม่เหมาะสำหรับเว็บไซต์ที่มีเนื้อหาซับซ้อนหรือเปลี่ยนแปลงบ่อย
+                <br>&emsp;&emsp;2. เว็บไซต์ Dynamic คือเว็บไซต์ที่สามารถเปลี่ยนแปลงเนื้อหาและโต้ตอบกับผู้ใช้แบบเรียลไทม์
+                โดยดึงข้อมูลจากเซิร์ฟเวอร์หรือฐานข้อมูล เหมาะสำหรับเว็บไซต์ที่มีฟีเจอร์ซับซ้อนและเนื้อหาอัปเดตบ่อย เช่น
+                เว็บข่าวหรืออีคอมเมิร์ซ
+                <img src="1-21.jpg" alt="" width="550px" class="img">
+                <div class="imgfrom" style="margin-top: 10px;">หมายเหตุ. จาก
+                    https://www.accuwebhosting.com/blog/static-vs-dynamic-website/</div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+</body>
+
+
+</html>

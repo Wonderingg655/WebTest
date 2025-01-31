@@ -6,29 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทเรียน
+            <div>⏷ หน้าหลัก</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
@@ -36,25 +41,63 @@
     </div>
 
     <div class="gridContainer gridContainerInfo">
-        <div style="border-radius: 2vh; overflow-x: hidden; box-sizing: border-box; padding: 0;">
-            <div class="headerRight" style="font-size: 40px; padding: 10px;">การสร้างเว็บเพจด้วยภาษา HTML</div>
-            HTML
-            head
-            title
-            body
-            div
+        <div id="gridItem1">
+            <div class="headerRightIndex">การสร้างเว็บเพจด้วยภาษา HTML</div>
+            <div class="info1">
+                <img src="HTML5_logo.png" alt=""
+                    style="height: 200px; margin-left: auto; margin-right: auto; display: block; margin-bottom: 20px;">
+                &emsp;&emsp;ภาษา HTML เป็นภาษาคอมพิวเตอร์ที่ใช้ในการสร้างโครงสร้างและเนื้อหาของเว็บไซต์
+                โดยทำงานร่วมกับภาษาอื่น ๆ เช่น CSS และ JavaScript เพื่อทำให้เว็บเพจมีการออกแบบและการทำงานที่สมบูรณ์ HTML
+                ใช้แท็กในการกำหนดส่วนต่าง ๆ ของหน้าเว็บ เช่น หัวเรื่อง ย่อหน้า ตาราง ลิงก์ หรือรูปภาพ
+                ซึ่งแท็กเหล่านี้จะถูกอ่านและแปลผลโดยเว็บเบราว์เซอร์เพื่อแสดงผลหน้าเว็บให้ผู้ใช้งานเห็น HTML
+                เป็นพื้นฐานสำคัญสำหรับการพัฒนาเว็บไซต์ และเป็นภาษาที่เรียนรู้ได้ง่ายสำหรับผู้เริ่มต้นในสายงานพัฒนาเว็บ
+                <div class="line"></div>
+                <div class="infoheader1">บทการเรียนรู้</div>
+                <div class="flexdisplay">
+                    <div class="displaychildren">
+                        <div class="itemheader1" onclick="window.location.href = 'info1.html'">บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info1_1.html'">1.1 อินเทอร์เน็ตและเวิลด์ไวด์เว็บ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info1_2.html'">1.2 รู้จักเว็บเพจ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info1_3.html'">1.3 รู้จักภาษา HTML</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'test1.html'">แบบฝึกหัด บทที่ 1</div>
+                    </div>
+
+                    <div class="displaychildren">
+                        <div class="itemheader1" onclick="window.location.href = 'info2.html'">บทที่ 2 โครงสร้างภาษา HTML</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info2_1.html'">2.1 โครงสร้างภาษา HTML คืออะไร</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'sand2.html'">บล็อกคำสั่ง โครงสร้างภาษา HTML</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'test2.html'">แบบฝึกหัด บทที่ 2</div>
+                    </div>
+                    <div class="displaychildren">
+                        <div class="itemheader1" onclick="window.location.href = 'info3.html'">บทที่ 3 แท็กภาษา HTML</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info3_1.html'">3.1 การแทรกข้อความ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info3_2.html'">3.2 การแทรกรูปภาพ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info3_3.html'">3.3 การแทรกตาราง</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'sand3.html'">บล็อกคำสั่ง แทรกข้อความ ลิงก์ และรูปภาพ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'sand3_2.html'">บล็อกคำสั่ง แทรกตาราง </div>
+                        <div class="iteminfo1" onclick="window.location.href = 'test3.html'">แบบฝึกหัด บทที่ 3</div>
+                    </div>
+                    <div class="displaychildren">
+                        <div class="itemheader1" onclick="window.location.href = 'info4.html'">บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษาCSS</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info4_1.html'">4.1 การจัดรูปแบบข้อความ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'info4_2.html'">4.2 การจัดรูปแบบรูปภาพ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'sand4.html'">บล็อกคำสั่ง จัดรูปแบบข้อความ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'sand4_2.html'">บล็อกคำสั่ง จัดรูปแบบรูปภาพ</div>
+                        <div class="iteminfo1" onclick="window.location.href = 'test4.html'">แบบฝึกหัด บทที่ 4</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!--  Nav Dropdown Menu -->
-    <script>
-        function openPopup() {
-            var dropdown = document.getElementById("classDropdown");
-            dropdown.classList.toggle("openDropdown");
-        }
+        <!--  Nav Dropdown Menu -->
+        <script>
+            function openPopup() {
+                var dropdown = document.getElementById("classDropdown");
+                dropdown.classList.toggle("openDropdown");
+            }
 
-    </script>
-    <!--  Nav Dropdown Menu -->
+        </script>
+        <!--  Nav Dropdown Menu -->
 
 </body>
 

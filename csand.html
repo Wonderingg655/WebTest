@@ -8,6 +8,7 @@
     <script src="DragDropTouch.js" charset="utf-8"> </script>
 
     <link rel="stylesheet" href="stylecsand.css">
+    <link rel="stylesheet" href="quizstyle.css">
 
     <script type="text/javascript">
         /* var intervalId = window.setInterval(function() { //run command every 0.5 sec      stop command clearInterval(intervalId)
@@ -16,29 +17,38 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ เขียนโค้ด
+            <div>⏷ เขียนโค้ด</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'index.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
             </div>
         </div>
 
@@ -53,15 +63,11 @@
                     <div class="list2" id="L1C1">
                         <div class="listItem1">&lt;<div class="listE1">html</div>&gt;</div>
                         <div id="conrightE" class="conrightA">
-                            <!-- <div class="list2" id="L3C1">
-                                <div>&lt;<div class="listE2">head</div>&gt;</div>
-                                <div id="conrightE2A" class="conrightB2"></div>
-                                <div>&lt;&#47;<div class="listE2">head</div>&gt;</div>
-                            </div> -->
-
                             <div class="list2" id="L3C1">
                                 <div>&lt;<div class="listE2">body</div>&gt;</div>
+
                                 <textarea id="conrightE2B" class="conrightA2" onkeyup="run()"><div style="font-size:50px;">Hello World</div></textarea>
+                                
                                 <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
                             </div>
 

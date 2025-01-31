@@ -17,34 +17,42 @@
          }, 500);*/
     </script>
 
-    <title>Web Game</title>
+    <title>สื่อการสอนภาษา HTML</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            ⏷ บทที่ 3 คำสั่งภาษา HTML 2
+            <div>⏷ บทที่ 3 แท็กภาษา HTML 2</div>
         </div>
         <div id="classDropdown" class="classDropdown">
-            <div onclick="window.location.href = 'info1.html'">
-                บทที่ 1 ความรู้เบื้องต้นภาษา HTML
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
             </div>
-            <div onclick="window.location.href = 'info2.html'">
-                บทที่ 2 คำสั่งภาษา HTML 1
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info3.html'">
-                บทที่ 3 คำสั่งภาษา HTML 2
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
             </div>
-            <div onclick="window.location.href = 'info4.html'">
-                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 แท็กภาษา HTML
             </div>
-            <div onclick="window.location.href = 'csand.html'">
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
                 เขียนโค้ด
             </div>
         </div>
 
-        <div class="dropdownHeader" onclick="window.location.href = 'test3.html'">
-            แบบฝึกหัด ⯈
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'sand3.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'test3.html'">
+                <div>แบบฝึกหัด ⯈</div>
+            </div>
         </div>
     </div>
 
@@ -89,7 +97,7 @@
                         <div id="conrightE3"></div>
                         <div>&lt;&#47;table&gt;</div>
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกตาราง</div>
+                    <div class="Ldescription">แท็กแทรกตาราง</div>
                 </div>
 
                 <div class="list1 listE4" id="L8C1-1" draggable="true">
@@ -98,7 +106,7 @@
                         <div id="conrightE4C1-1"></div>
                         <div>&lt;&#47;tr&gt;</div>
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกแถวตาราง</div>
+                    <div class="Ldescription">แท็กแทรกแถวตาราง</div>
                 </div>
 
                 <div class="list1 listE4" id="L8C1-2" draggable="true">
@@ -107,7 +115,7 @@
                         <div id="conrightE4C1-2"></div>
                         <div>&lt;&#47;tr&gt;</div>
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกแถวตาราง</div>
+                    <div class="Ldescription">แท็กแทรกแถวตาราง</div>
                 </div>
 
                 <div class="list1 listE4" id="L8C1-3" draggable="true">
@@ -116,51 +124,51 @@
                         <div id="conrightE4C1-3"></div>
                         <div>&lt;&#47;tr&gt;</div>
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกแถวตาราง</div>
+                    <div class="Ldescription">แท็กแทรกแถวตาราง</div>
                 </div>
 
                 <div class="list1 listE5" id="L9C1-1" draggable="true">
                     <div>
                         &lt;td&gt;
-                        <input type="text" id="textL9C1-1" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL9C1-1" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;td&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกคอลัมน์ตาราง</div>
+                    <div class="Ldescription">แท็กแทรกเซลล์ตาราง</div>
                 </div>
 
                 <div class="list1 listE5" id="L9C1-2" draggable="true">
                     <div>
                         &lt;td&gt;
-                        <input type="text" id="textL9C1-2" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL9C1-2" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;td&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกคอลัมน์ตาราง</div>
+                    <div class="Ldescription">แท็กแทรกเซลล์ตาราง</div>
                 </div>
                 <div class="list1 listE5" id="L9C1-3" draggable="true">
                     <div>
                         &lt;td&gt;
-                        <input type="text" id="textL9C1-3" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL9C1-3" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;td&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกคอลัมน์ตาราง</div>
+                    <div class="Ldescription">แท็กแทรกเซลล์ตาราง</div>
                 </div>
 
                 <div class="list1 listE5" id="L9C1-4" draggable="true">
                     <div>
                         &lt;td&gt;
-                        <input type="text" id="textL9C1-4" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL9C1-4" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;td&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกคอลัมน์ตาราง</div>
+                    <div class="Ldescription">แท็กแทรกเซลล์ตาราง</div>
                 </div>
 
                 <div class="list1 listE5" id="L9C1-5" draggable="true">
                     <div>
                         &lt;td&gt;
-                        <input type="text" id="textL9C1-5" onkeyup="run();" value="Hello World">
+                        <input type="text" id="textL9C1-5" onkeyup="run();" value="Hello World" class="text">
                         &lt;&#47;td&gt;
                     </div>
-                    <div class="Ldescription">คำสั่งแทรกคอลัมน์ตาราง</div>
+                    <div class="Ldescription">แท็กแทรกเซลล์ตาราง</div>
                 </div>
             </div>
         </div>
@@ -343,6 +351,9 @@
                         textApp = textApp.concat("</tr>");
                     }
                     textApp = textApp.concat("</table>");
+
+                    if(textApp.includes("<td>"))
+                    textApp = textApp.concat("<div style='text-align:center; margin-top:50px;'>หมายเหตุ ภาพนี้ตกแต่งขึ้นเพื่อให้ง่ายต่อการเข้าใจในบทเรียนเท่านั้น</div>");
                 }
 
             }
