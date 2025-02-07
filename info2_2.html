@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="DragDropTouch.js" charset="utf-8"> </script>
+
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="quizstyle.css">
+    <link rel="stylesheet" href="styleinfo.css">
+
+    <title>สื่อการสอนภาษา HTML</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div onclick="openPopup();" class="dropdownHeader">
+            <div>⏷ บทที่ 2 โครงสร้างภาษา HTML</div>
+        </div>
+        <div id="classDropdown" class="classDropdown">
+            <div onclick="window.location.href = 'index.html'" class="dropdownBList">
+                หน้าหลัก
+            </div>
+            <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
+                บทที่ 1 อินเทอร์เน็ตและเว็บไซต์
+            </div>
+            <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
+                บทที่ 2 โครงสร้างภาษา HTML
+            </div>
+            <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
+                บทที่ 3 การแทรกองค์ประกอบ
+            </div>
+            <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
+                บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
+            </div>
+            <div onclick="window.location.href = 'csand.html'" class="dropdownBList">
+                เขียนโค้ด
+            </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row; height: 100%;">
+            <div class="dropdownHeader" onclick="window.location.href = 'info2_1.html'" style="margin-right: 10px;">
+                <div>กลับ ⯇</div>
+            </div>
+            <div class="dropdownHeader" onclick="window.location.href = 'sand2.html'">
+                <div>หน้าต่อไป ⯈</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gridContainer gridContainerInfo">
+        <div id="gridItem1" style="min-height: 100%;">
+            <div class="headerinfo">2.2 โครงสร้างภาษา HTML</div>
+            <div class="info1">
+                <div class="infoheader2">คำสั่งเริ่มต้นของเอกสาร HTML &lt;html></div>
+                &emsp;&emsp;คำสั่ง &lt;html> เป็นคำสั่งเริ่มต้นในการเขียนโปรแกรมและคำสั่ง &lt;/html>
+                เป็นการสิ้นสุดโปรแกรม HTML คำสั่งนี้จะไม่แสดงผลในโปรแกรมเว็บเบราเซอร์
+                แต่ต้องเขียนเพื่อให้เกิดความเป็นระบบของงาน และเพื่อจะให้รู้ว่าเอกสารนี้เป็นเอกสารของภาษา HTML
+
+                <div class="line"></div>
+                <div class="infoheader2">ส่วนหัว &lt;head></div>
+                &emsp;&emsp;ส่วนหัวเป็นส่วนที่ใช้อธิบายเกี่ยวกับข้อมูลเฉพาะของหน้าเว็บนั้น ๆ เช่น ชื่อเรื่องของหน้าเว็บ
+                (Title), ชื่อผู้จัดทำเว็บ(Author), คีย์เวิร์ดสำหรับการค้นหา (Keyword) โดยมี Tag สำคัญ คือ &lt;title>
+                ชื่อเรื่องของหน้าเว็บ ข้อความที่ใช้เป็น title ไม่ควรพิมพ์เกิน 64 ตัวอักษร, ไม่ต้องใส่ลักษณะพิเศษ เช่น
+                ตัวหนา เอียง หรือสี
+
+                <div class="line"></div>
+                <div class="infoheader2">ส่วนเนื้อหา &lt;body></div>
+                &emsp;&emsp;ส่วนหัวเป็นส่วนเนื้อหาหลักของหน้าเว็บ ซึ่งการแสดงผลจะต้องใช้ Tag จำนวนมาก
+                ขึ้นอยู่กับลักษณะของข้อมูล เช่น ข้อความ, รูปภาพ, เสียง, วีดิโอ หรือไฟล์ต่างๆส่วนเนื้อหาเอกสารเว็บ
+                เป็นส่วนการทำงานหลักของหน้าเว็บ ประกอบด้วย Tag มากมายตามลักษณะของข้อมูล ที่ต้องการนำเสนอ
+                การป้อนคำสั่งในส่วนนี้ ไม่มีข้อจำกัดสามารถป้อนติดกัน หรือ 1 บรรทัดต่อ 1 คำสั่งก็ได้
+                แต่ส่วนใหญ่จะยึดรูปแบบที่อ่านง่าย คือ การทำย่อหน้าในชุดคำสั่งที่เกี่ยวข้องกัน
+
+                <div class="line"></div>
+                <div class="infoheader2">รูปแบบโครงสร้างหลักของภาษา HTML</div>
+                &emsp;&emsp; รูปแบบโครงสร้างหลักของภาษา HTML มีดังนี้
+
+                <div class="flexdisplay" style="grid-template-rows: auto; background-color: white; font-size: 21px;">
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1">คำสั่ง</div>
+
+                        <p class="structure">&lt;<highlight class="high2">html</highlight>&gt;</p>
+                        <p class="structure">&emsp;&emsp;&lt;<highlight class="high1">head</highlight>&gt;</p>
+                        <p class="structure">&emsp;&emsp;&emsp;&emsp;&lt;title&gt;</p>
+                        <textarea id="con6" class="codebox2" onkeyup="run('con6','show6')">Title</textarea>
+                        <p class="structure">&emsp;&emsp;&emsp;&emsp;&lt;/title></p>
+                        <p class="structure">&emsp;&emsp;&lt;/<highlight class="high1">head</highlight>&gt;</p>
+                        <p class="structure">&emsp;&emsp;&lt;<highlight class="high1">body</highlight>&gt;</p>
+                        <textarea id="con1" class="codebox3" onkeyup="run('con1','show1')"><h1>Hello World</h1>
+<p>Hello World</p>
+<img src="ball.jpg"></textarea>
+                        <p class="structure">&emsp;&emsp;&lt;/<highlight class="high1">body</highlight>&gt;</p>
+                        <p class="structure">&lt;/<highlight class="high2">html</highlight>&gt;</p>
+                    </div>
+
+                    <div class="displaychildren" style="border: 3px solid #1693c0bf; cursor: default;">
+                        <div class="itemheader1" id="show6"></div>
+                        <p id="show1"></p>
+                        <div style='text-align:center; margin:10px 0;'>
+                            หมายเหตุ ภาพนี้ตกแต่งขึ้นเพื่อให้ง่ายต่อการเข้าใจในบทเรียนเท่านั้น</div>
+                    </div>
+                </div>
+                <div class="buttoninfo" onclick="window.location.href = 'sand2.html'">คลิก
+                    เพื่อทดลองใช้งานด้วยบล็อกคำสั่ง</div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Nav Dropdown Menu -->
+    <script>
+        function openPopup() {
+            var dropdown = document.getElementById("classDropdown");
+            dropdown.classList.toggle("openDropdown");
+        }
+
+
+        window.onload = runstart();
+
+        function runstart() {
+            for (let i = 1; i < 7; i = i + 5) {
+                let a = 'con';
+                a = a.concat(i);
+                let b = 'show';
+                b = b.concat(i);
+                run(a, b);
+            }
+        }
+
+        function run(a, b) {
+            let textCode = document.getElementById(a).value;
+            let show = document.getElementById(b);
+            var strHTML1 = '';
+            strHTML1 = strHTML1.concat(textCode);
+            show.innerHTML = strHTML1;
+
+            if(a == 'con6' && textCode != 'Title'){
+                show.classList.add("headerAnsEdit2");
+            }
+            else show.classList.remove("headerAnsEdit2");
+        }
+    </script>
+    <!--  Nav Dropdown Menu -->
+
+</body>
+
+
+</html>

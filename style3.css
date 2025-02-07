@@ -245,6 +245,30 @@ option,
     padding: 0 10px;
 }
 
+#show1 h1 {
+    font-size: 40px;
+}
+
+#show1 h2 {
+    font-size: 30px;
+}
+
+#show1 h3{
+    font-size: 20px;
+}
+
+#show1 h4{
+    font-size: 10px;
+}
+
+#show1 h5{
+    font-size: 7.5px;
+}
+
+#show1 h6{
+    font-size: 5px;
+}
+
 @media screen and (max-height:800px) {
 
     #conright,
@@ -266,4 +290,8 @@ option,
     .imgText {
         border: 2px solid #1693c0bb;
     }
+}
+
+#DropdownMenu1{
+    font-weight: bold;
 }

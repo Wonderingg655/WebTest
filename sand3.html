@@ -22,20 +22,20 @@
 <body>
     <div class="NavBar">
         <div onclick="openPopup();" class="dropdownHeader">
-            <div>⏷ บทที่ 3 แท็กภาษา HTML 2</div>
+            <div>⏷ บทที่ 3 การแทรกองค์ประกอบ 2</div>
         </div>
         <div id="classDropdown" class="classDropdown">
             <div onclick="window.location.href = 'index.html'" class="dropdownBList">
                 หน้าหลัก
             </div>
             <div onclick="window.location.href = 'info1.html'" class="dropdownBList">
-                บทที่ 1 ความรู้เบื้องต้น เรื่อง เว็บเพจและภาษา HTML
+                บทที่ 1 อินเทอร์เน็ตและเว็บไซต์
             </div>
             <div onclick="window.location.href = 'info2.html'" class="dropdownBList">
                 บทที่ 2 โครงสร้างภาษา HTML
             </div>
             <div onclick="window.location.href = 'info3.html'" class="dropdownBList">
-                บทที่ 3 แท็กภาษา HTML
+                บทที่ 3 การแทรกองค์ประกอบ
             </div>
             <div onclick="window.location.href = 'info4.html'" class="dropdownBList">
                 บทที่ 4 การจัดรูปแบบเว็บเพจด้วยภาษา HTML และภาษา CSS
@@ -68,7 +68,7 @@
                             <div class="list2" id="L3C1">
                                 <div>&lt;<div class="listE2">body</div>&gt;</div>
                                 <div id="conrightE2B" class="conrightA2"></div>
-                                
+
                                 <div>&lt;&#47;<div class="listE2">body</div>&gt;</div>
                             </div>
 
@@ -124,9 +124,16 @@
                 <div class="list1 listE3 listE2I" id="L8C1" draggable="true">
                     <div>
                         <div>
-                            &lt;h1&gt;
-                            <input type="text" id="textL8C1" onkeyup="run();" value="Hello World" class="text">
-                            &lt;&#47;h1&gt;
+                            <select id="DropdownMenu1" onchange="changeFunc();">
+                                <option selected="selected" value="h1">&lt;h1&gt;</option>
+                                <option value="h2">&lt;h2&gt;</option>
+                                <option value="h3">&lt;h3&gt;</option>
+                                <option value="h4">&lt;h4&gt;</option>
+                                <option value="h5">&lt;h5&gt;</option>
+                                <option value="h6">&lt;h6&gt;</option>
+                            </select>
+                            <input type="text" id="textL8C1" onkeyup="run();" value="Header" class="text">
+                            &lt;&#47;<p id="htail" style="display: inline;">h1</p>&gt;
                         </div>
                     </div>
                     <div class="Ldescription">แท็กแทรกหัวเรื่องใหญ่</div>
@@ -140,6 +147,15 @@
         function openPopup() {
             var dropdown = document.getElementById("classDropdown");
             dropdown.classList.toggle("openDropdown");
+        }
+
+        function changeFunc() {
+            var selectBox = document.getElementById("DropdownMenu1");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+            let htail = document.getElementById("htail");
+            htail.innerHTML = selectedValue;
+            run();
         }
 
     </script>
@@ -229,6 +245,8 @@
 
             let textL8C1 = document.getElementById("textL8C1");
             var textH1 = textL8C1.value;
+            var selectBox = document.getElementById("DropdownMenu1");
+            var selectedValue1 = selectBox.options[selectBox.selectedIndex].value;
 
             const contains = (parent, child) => {
                 return parent !== child && parent.contains(child);
@@ -244,10 +262,10 @@
                         textApp = textApp.concat(textImg);
                     }
                     if (contains(rightBoxE2B, textL7C1)) {
-                        textApp = textApp.concat('<a href="',textLink1,'" target="_blank" style="font-size: 30px; display:block;">',textLink2,'</a>');
+                        textApp = textApp.concat('<a href="', textLink1, '" target="_blank" style="font-size: 30px; display:block;">', textLink2, '</a>');
                     }
                     if (contains(rightBoxE2B, textL8C1)) {
-                        textApp = textApp.concat('<h1 style = "font-size: 40px;">', textH1, '</h1>');
+                        textApp = textApp.concat('<',selectedValue1,'>', textH1, '</',selectedValue1,'>');
                     }
                 }
 
